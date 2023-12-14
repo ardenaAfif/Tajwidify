@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "326193139308",
+    "project_id": "tajwidify-fadd5",
+    "storage_bucket": "tajwidify-fadd5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:326193139308:android:c331dac006d68bca041249",
+        "android_client_info": {
+          "package_name": "com.dicoding.submission.tajwidify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "326193139308-8g9v9e0b9kqq7n598ssoip151llfm9g3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWie9QBFkesD2seUKDhkAAByK1pO3e_Ao"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "326193139308-8g9v9e0b9kqq7n598ssoip151llfm9g3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
