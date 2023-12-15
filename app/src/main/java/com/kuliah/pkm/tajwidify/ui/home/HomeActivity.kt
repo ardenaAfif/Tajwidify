@@ -1,21 +1,45 @@
 package com.kuliah.pkm.tajwidify.ui.home
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import androidx.fragment.app.Fragment
 import com.kuliah.pkm.tajwidify.R
+import com.kuliah.pkm.tajwidify.databinding.ActivityHomeBinding
+import com.kuliah.pkm.tajwidify.ui.doa.DoaFragment
+import com.kuliah.pkm.tajwidify.ui.profile.ProfileFragment
 
 class HomeActivity : AppCompatActivity() {
+
+    val binding by lazy {
+        ActivityHomeBinding.inflate(layoutInflater)
+    }
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_home)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+        setContentView(binding.root)
+
+        binding.bottomNavView.setOnItemSelectedListener { menuItem ->
+            when(menuItem.itemId) {
+                R.id.home -> {
+                    replaceFragment(HomeFragment())
+                    true
+                }
+                R.id.doa -> {
+                    replaceFragment(DoaFragment())
+                    true
+                }
+                R.id.profile -> {
+                    replaceFragment(ProfileFragment())
+                    true
+                }
+                else -> false
+            }
         }
+        replaceFragment(HomeFragment())
+    }
+
+    private fun replaceFragment(fragment: Fragment){
+        supportFragmentManager.beginTransaction().replace(R.id.fragmentHomeView, fragment).commit()
     }
 }

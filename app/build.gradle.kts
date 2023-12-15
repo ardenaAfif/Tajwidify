@@ -44,9 +44,9 @@ android {
 }
 
 dependencies {
-    implementation("androidx.activity:activity:1.8.0")
+    implementation("androidx.activity:activity-ktx:1.8.2")
     //Navigation component
-    val navVersion = "2.6.0"
+    val navVersion = "2.7.6"
     implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")
     implementation("androidx.navigation:navigation-ui-ktx:$navVersion")
 
