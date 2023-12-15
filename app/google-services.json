@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:326193139308:android:c331dac006d68bca041249",
+        "mobilesdk_app_id": "1:326193139308:android:9b7de8bd00f081b0041249",
         "android_client_info": {
-          "package_name": "com.dicoding.submission.tajwidify"
+          "package_name": "com.kuliah.pkm.tajwidify"
         }
       },
       "oauth_client": [

@@ -1,4 +1,4 @@
-package com.dicoding.submission.tajwidify
+package com.kuliah.pkm.tajwidify
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.dicoding.submission.tajwidify", appContext.packageName)
+        assertEquals("com.kuliah.pkm.tajwidify", appContext.packageName)
     }
 }

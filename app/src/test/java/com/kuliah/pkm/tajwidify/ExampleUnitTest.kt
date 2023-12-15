@@ -1,4 +1,4 @@
-package com.dicoding.submission.tajwidify
+package com.kuliah.pkm.tajwidify
 
 import org.junit.Test
 

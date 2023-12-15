@@ -9,11 +9,11 @@ plugins {
 }
 
 android {
-    namespace = "com.dicoding.submission.tajwidify"
+    namespace = "com.kuliah.pkm.tajwidify"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.dicoding.submission.tajwidify"
+        applicationId = "com.kuliah.pkm.tajwidify"
         minSdk = 21
         targetSdk = 34
         versionCode = 1
@@ -32,22 +32,26 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
+    }
+    buildFeatures {
+        viewBinding = true
     }
 }
 
 dependencies {
+    implementation("androidx.activity:activity:1.8.0")
     //Navigation component
     val navVersion = "2.6.0"
     implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")
     implementation("androidx.navigation:navigation-ui-ktx:$navVersion")
 
     //loading button
-    implementation("br.com.simplepass:loading-button-android:2.2.0")
+    implementation("com.github.leandroborgesferreira:loading-button-android:2.3.0")
 
     //Glide
     implementation("com.github.bumptech.glide:glide:4.15.0")
@@ -66,13 +70,14 @@ dependencies {
     implementation("com.google.dagger:hilt-android:2.44")
     kapt("com.google.dagger:hilt-compiler:2.44")
 
-
     //Coroutines with firebase
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.7.1")
 
     // Firebase
     implementation("com.google.firebase:firebase-analytics:21.5.0")
-
+    implementation("com.google.firebase:firebase-auth-ktx:22.3.0")
+    implementation("com.google.android.gms:play-services-auth:20.7.0")
+    implementation("com.google.firebase:firebase-firestore-ktx:24.10.0")
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
