@@ -6,6 +6,12 @@
     <string name="masuk">Masuk</string>
     <string name="register">Daftar</string>
     <string name="register_desc">Mari belajar Tajwid bersama kami</string>
+
+    // Toolbar Name
+    <string name="doa_harian">Doa Harian</string>
+
+
+    <string name="no_results">Barang yang anda cari tidak ditemukan</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_home"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/doaFragment"
+        android:name="com.kuliah.pkm.tajwidify.ui.doa.DoaFragment"
+        android:label="fragment_doa"
+        tools:layout="@layout/fragment_doa" >
+        <action
+            android:id="@+id/action_doaFragment_to_detailDoaFragment"
+            app:destination="@id/detailDoaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailDoaFragment"
+        android:name="com.kuliah.pkm.tajwidify.ui.doa.DetailDoaFragment"
+        android:label="fragment_detail_doa"
+        tools:layout="@layout/fragment_detail_doa" >
+        <argument
+            android:name="doa"
+            app:argType="com.kuliah.pkm.tajwidify.data.Doa" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.kuliah.pkm.tajwidify.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.kuliah.pkm.tajwidify.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>

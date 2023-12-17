@@ -7,11 +7,13 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeActivity">
 
-    <fragment
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentHomeView"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        app:navGraph="@navigation/nav_home"
+        app:defaultNavHost="true"
         tools:layout="@layout/fragment_home"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavView"
         app:layout_constraintEnd_toEndOf="parent"
