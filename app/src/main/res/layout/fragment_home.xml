@@ -53,9 +53,12 @@
         </LinearLayout>
 
         <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivProfile"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center_vertical"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="3dp"
             android:src="@drawable/logo_bulet" />
 
     </LinearLayout>
