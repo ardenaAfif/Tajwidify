@@ -3,17 +3,11 @@ package com.kuliah.pkm.tajwidify.ui.home
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
-import androidx.navigation.NavHostController
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.kuliah.pkm.tajwidify.R
 import com.kuliah.pkm.tajwidify.databinding.ActivityHomeBinding
-import com.kuliah.pkm.tajwidify.ui.doa.DoaFragment
-import com.kuliah.pkm.tajwidify.ui.profile.ProfileFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -39,12 +33,8 @@ class HomeActivity : AppCompatActivity() {
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when(destination.id) {
-                R.id.homeFragment -> {
-                    binding.bottomNavView.visibility = View.VISIBLE
-                }
-                R.id.doaFragment -> {
-                    binding.bottomNavView.visibility = View.VISIBLE
-                }
+                R.id.homeFragment,
+                R.id.doaFragment,
                 R.id.profileFragment -> {
                     binding.bottomNavView.visibility = View.VISIBLE
                 }
@@ -76,8 +66,18 @@ class HomeActivity : AppCompatActivity() {
         }
     }
 
-    private fun replaceFragment(fragment: Fragment, isSearchMode: Boolean = false) {
-        this.isSearchMode = isSearchMode
-        supportFragmentManager.beginTransaction().replace(R.id.fragmentHomeView, fragment).commit()
+    override fun onBackPressed() {
+        // Jika menekan back pada HomeActivity, maka keluar dari aplikasi
+        val currentDestinationId = navController.currentDestination?.id
+
+        if (currentDestinationId == R.id.homeFragment ||
+            currentDestinationId == R.id.doaFragment ||
+            currentDestinationId == R.id.profileFragment)
+        {
+            finishAffinity()
+        } else {
+            super.onBackPressed()
+        }
     }
+
 }
