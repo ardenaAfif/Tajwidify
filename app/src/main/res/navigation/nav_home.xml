@@ -27,10 +27,37 @@
         android:id="@+id/homeFragment"
         android:name="com.kuliah.pkm.tajwidify.ui.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_subMateriFragment"
+            app:destination="@id/subMateriFragment" />
+        <argument
+            android:name="subMateri"
+            app:argType="com.kuliah.pkm.tajwidify.data.SubMateri" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.kuliah.pkm.tajwidify.ui.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/subMateriFragment"
+        android:name="com.kuliah.pkm.tajwidify.ui.materi.submateri.SubMateriFragment"
+        android:label="fragment_sub_materi"
+        tools:layout="@layout/fragment_sub_materi" >
+        <action
+            android:id="@+id/action_subMateriFragment_to_modulFragment"
+            app:destination="@id/modulFragment" />
+        <argument
+            android:name="subMateri"
+            app:argType="com.kuliah.pkm.tajwidify.data.SubMateri" />
+        <argument
+            android:name="category"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/modulFragment"
+        android:name="com.kuliah.pkm.tajwidify.ui.materi.content.ModulFragment"
+        android:label="fragment_modul"
+        tools:layout="@layout/fragment_modul" />
 </navigation>

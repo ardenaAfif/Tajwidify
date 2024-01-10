@@ -1,4 +1,4 @@
-package com.kuliah.pkm.tajwidify.viewmodel
+package com.kuliah.pkm.tajwidify.ui.auth.login
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

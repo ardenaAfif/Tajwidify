@@ -15,7 +15,6 @@ import com.kuliah.pkm.tajwidify.data.User
 import com.kuliah.pkm.tajwidify.databinding.FragmentRegisterBinding
 import com.kuliah.pkm.tajwidify.utils.RegisterValidation
 import com.kuliah.pkm.tajwidify.utils.Resource
-import com.kuliah.pkm.tajwidify.viewmodel.RegisterViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

@@ -14,9 +14,7 @@ import com.kuliah.pkm.tajwidify.R
 import com.kuliah.pkm.tajwidify.databinding.FragmentLoginBinding
 import com.kuliah.pkm.tajwidify.ui.home.HomeActivity
 import com.kuliah.pkm.tajwidify.utils.Resource
-import com.kuliah.pkm.tajwidify.viewmodel.LoginViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.flow.collect
 
 @AndroidEntryPoint
 class LoginFragment : Fragment() {

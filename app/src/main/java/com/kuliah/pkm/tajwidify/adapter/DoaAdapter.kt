@@ -8,13 +8,13 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.kuliah.pkm.tajwidify.data.Doa
-import com.kuliah.pkm.tajwidify.databinding.DoaItemBinding
+import com.kuliah.pkm.tajwidify.databinding.ItemDoaBinding
 import com.kuliah.pkm.tajwidify.ui.doa.DoaFragmentDirections
 
 class DoaAdapter (private val context: Context) :
     RecyclerView.Adapter<DoaAdapter.DoaViewHolder>() {
 
-    inner class DoaViewHolder(private val binding: DoaItemBinding) :
+    inner class DoaViewHolder(private val binding: ItemDoaBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(doa: Doa) {
             binding.apply {
@@ -38,7 +38,7 @@ class DoaAdapter (private val context: Context) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DoaViewHolder {
         return DoaViewHolder(
-            DoaItemBinding.inflate(
+            ItemDoaBinding.inflate(
                 LayoutInflater.from(context), parent, false
             )
         )

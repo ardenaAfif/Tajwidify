@@ -1,9 +1,9 @@
-package com.kuliah.pkm.tajwidify.viewmodel
+package com.kuliah.pkm.tajwidify.ui.doa
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.google.firebase.firestore.FirebaseFirestore
 import com.kuliah.pkm.tajwidify.data.Doa
+import com.kuliah.pkm.tajwidify.firebase.FirebaseCommon
 import com.kuliah.pkm.tajwidify.utils.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -13,7 +13,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class DoaViewModel @Inject constructor(
-    private val firestore: FirebaseFirestore
+    private val firestore: FirebaseCommon
 ) : ViewModel() {
 
     private val _doa = MutableStateFlow<Resource<List<Doa>>>(Resource.Unspecified())
@@ -26,19 +26,13 @@ class DoaViewModel @Inject constructor(
     private fun fetchDoa() {
         viewModelScope.launch {
             _doa.emit(Resource.Loading())
-        }
-
-        firestore.collection("doa").get()
-            .addOnSuccessListener { result ->
+            try {
+                val result = firestore.getDoa()
                 val doaList = result.toObjects(Doa::class.java)
-                viewModelScope.launch {
-                    _doa.emit(Resource.Success(doaList))
-                }
+                _doa.emit(Resource.Success(doaList))
+            } catch (e: Exception) {
+                _doa.emit(Resource.Error(e.message.toString()))
             }
-            .addOnFailureListener {
-                viewModelScope.launch {
-                    _doa.emit(Resource.Error(it.message.toString()))
-                }
-            }
+        }
     }
 }

@@ -15,11 +15,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.kuliah.pkm.tajwidify.R
 import com.kuliah.pkm.tajwidify.adapter.DoaAdapter
 import com.kuliah.pkm.tajwidify.databinding.FragmentDoaBinding
-import com.kuliah.pkm.tajwidify.ui.home.HomeActivity
 import com.kuliah.pkm.tajwidify.utils.Resource
-import com.kuliah.pkm.tajwidify.viewmodel.DoaViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import dagger.hilt.android.HiltAndroidApp
 import kotlinx.coroutines.flow.collectLatest
 
 @AndroidEntryPoint

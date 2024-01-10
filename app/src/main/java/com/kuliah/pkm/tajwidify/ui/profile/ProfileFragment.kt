@@ -1,12 +1,9 @@
 package com.kuliah.pkm.tajwidify.ui.profile
 
-import android.Manifest
-import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,7 +12,6 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
@@ -25,7 +21,6 @@ import com.kuliah.pkm.tajwidify.R
 import com.kuliah.pkm.tajwidify.databinding.FragmentProfileBinding
 import com.kuliah.pkm.tajwidify.ui.auth.AuthActivity
 import com.kuliah.pkm.tajwidify.utils.Resource
-import com.kuliah.pkm.tajwidify.viewmodel.ProfileViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 

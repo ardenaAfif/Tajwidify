@@ -1,4 +1,4 @@
-package com.kuliah.pkm.tajwidify.ui
+package com.kuliah.pkm.tajwidify.ui.splash
 
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
@@ -6,11 +6,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.kuliah.pkm.tajwidify.R
 import com.kuliah.pkm.tajwidify.databinding.ActivitySplashBinding
 import com.kuliah.pkm.tajwidify.ui.auth.AuthActivity
 
