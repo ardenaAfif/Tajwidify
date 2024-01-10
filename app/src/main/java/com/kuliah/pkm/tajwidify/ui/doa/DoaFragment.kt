@@ -82,11 +82,17 @@ class DoaFragment : Fragment() {
     }
 
     private fun showLoading() {
-        binding.doaProgressBar.visibility = View.VISIBLE
+        binding.apply {
+            shimmerFrame.visibility = View.VISIBLE
+            shimmerFrame.startShimmer()
+        }
     }
 
     private fun hideLoading() {
-        binding.doaProgressBar.visibility = View.GONE
+        binding.apply{
+            shimmerFrame.stopShimmer()
+            shimmerFrame.visibility = View.GONE
+        }
     }
 
     private fun searchAction() {

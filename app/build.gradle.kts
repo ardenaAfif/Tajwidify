@@ -44,6 +44,10 @@ android {
 }
 
 dependencies {
+
+    // Shimmer Effect
+    implementation("com.facebook.shimmer:shimmer:0.5.0")
+
     implementation("androidx.activity:activity-ktx:1.8.2")
     implementation("androidx.activity:activity:1.8.0")
 

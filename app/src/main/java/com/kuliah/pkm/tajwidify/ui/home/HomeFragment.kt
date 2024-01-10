@@ -102,11 +102,17 @@ class HomeFragment : Fragment() {
     }
 
     private fun showLoading() {
-        binding.progressBar.visibility = View.VISIBLE
+        binding.apply {
+            shimmerFrame.visibility = View.VISIBLE
+            shimmerFrame.startShimmer()
+        }
     }
 
     private fun hideLoading() {
-        binding.progressBar.visibility = View.GONE
+        binding.apply{
+            shimmerFrame.stopShimmer()
+            shimmerFrame.visibility = View.GONE
+        }
     }
 
 }
