@@ -8,10 +8,9 @@ import kotlinx.parcelize.Parcelize
 data class SubMateri(
     @DocumentId
     val subMateriId: String,
-    val category: String,
-    val imageUrl: String,
+    val imgUrl: String,
     val title: String,
     val urutan: Long
 ) : Parcelable {
-    constructor() : this("","", "", "", 0L)
+    constructor() : this("", "", "", 0L)
 }

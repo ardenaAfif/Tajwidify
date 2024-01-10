@@ -32,8 +32,8 @@
             android:id="@+id/action_homeFragment_to_subMateriFragment"
             app:destination="@id/subMateriFragment" />
         <argument
-            android:name="subMateri"
-            app:argType="com.kuliah.pkm.tajwidify.data.SubMateri" />
+            android:name="Materi"
+            app:argType="com.kuliah.pkm.tajwidify.data.Materi" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -50,10 +50,7 @@
             app:destination="@id/modulFragment" />
         <argument
             android:name="subMateri"
-            app:argType="com.kuliah.pkm.tajwidify.data.SubMateri" />
-        <argument
-            android:name="category"
-            app:argType="string" />
+            app:argType="com.kuliah.pkm.tajwidify.data.Materi" />
     </fragment>
     <fragment
         android:id="@+id/modulFragment"

@@ -93,6 +93,9 @@
             <include layout="@layout/item_shimer"/>
             <include layout="@layout/item_shimer"/>
             <include layout="@layout/item_shimer"/>
+            <include layout="@layout/item_shimer"/>
+            <include layout="@layout/item_shimer"/>
+            <include layout="@layout/item_shimer"/>
         </LinearLayout>
     </com.facebook.shimmer.ShimmerFrameLayout>
 

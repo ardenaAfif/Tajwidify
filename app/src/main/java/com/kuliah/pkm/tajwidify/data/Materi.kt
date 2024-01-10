@@ -10,7 +10,7 @@ data class Materi(
     val materiId: String,
     val isPretest: Boolean,
     val imgUrl: String,
-    val questions: Long,
+    val question: Long,
     val title: String,
     val urutan: Int
 ) : Parcelable {

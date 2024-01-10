@@ -21,7 +21,8 @@ class SubMateriAdapter(private val context: Context) :
                     tvTitle.text = subMateri.title
 
                     Glide.with(itemView)
-                        .load(subMateri.imageUrl)
+                        .load(subMateri.imgUrl)
+                        .centerCrop()
                         .into(ivSubmateri)
                 }
             }

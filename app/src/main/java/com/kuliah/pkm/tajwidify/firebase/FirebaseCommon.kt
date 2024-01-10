@@ -12,6 +12,7 @@ class FirebaseCommon {
         return firestore.collection("modul")
             .document(subMateriId)
             .collection("subModul")
+            .orderBy("urutan")
             .get().await()
     }
 

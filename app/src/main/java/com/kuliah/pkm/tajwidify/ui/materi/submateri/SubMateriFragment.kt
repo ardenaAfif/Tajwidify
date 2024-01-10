@@ -5,23 +5,28 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.NavArgs
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.kuliah.pkm.tajwidify.adapter.SubMateriAdapter
 import com.kuliah.pkm.tajwidify.data.SubMateri
 import com.kuliah.pkm.tajwidify.databinding.FragmentSubMateriBinding
 import com.kuliah.pkm.tajwidify.utils.Resource
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
-import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
 class SubMateriFragment : Fragment() {
 
     private lateinit var binding: FragmentSubMateriBinding
     private lateinit var subMateriAdapter: SubMateriAdapter
-    private val viewModel: SubMateriViewModel by viewModels()
-    private lateinit var subMateri: SubMateri
+    private val viewModel by viewModels<SubMateriViewModel>()
+    private val args: SubMateriFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,38 +39,47 @@ class SubMateriFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        subMateri = arguments?.getParcelable("SubMateri") ?: SubMateri()
-        setupRv()
-        observeSubMateri()
+        val materi = args.subMateri
+        viewModel.setSubMateri(materi)
+        setupRvSubMateri()
+        subMateriSetup()
+        customToolbar()
     }
 
-    private fun observeSubMateri() {
-        val category = arguments?.let { SubMateriFragmentArgs.fromBundle(it).category } ?: ""
+    private fun customToolbar() {
+        val materi = args.subMateri
 
-        viewModel.fetchSubMateri(category)
+        binding.apply {
+            toolbar.navBack.setOnClickListener {
+                findNavController().navigateUp()
+            }
+            toolbar.tvToolbarName.text = materi.title
+        }
+    }
 
-        lifecycleScope.launch {
-            viewModel.subMateriList.collectLatest { resource ->
-                when(resource) {
+    private fun subMateriSetup() {
+        lifecycleScope.launchWhenStarted {
+            viewModel.subMateriList.collectLatest {
+                when(it) {
                     is Resource.Loading -> {
-                        binding.progressBar.visibility = View.VISIBLE
+                        showLoading()
                     }
                     is Resource.Success -> {
-                        binding.progressBar.visibility = View.GONE
-                        subMateriAdapter.differ.submitList(resource.data)
+                        hideLoading()
+                        subMateriAdapter.differ.submitList(it.data)
                     }
                     is Resource.Error -> {
-                        binding.progressBar.visibility = View.GONE
-                        Log.e("SubMateri", resource.message.toString())
+                        hideLoading()
+                        Log.e("Sub Materi", it.message.toString())
+                        Toast.makeText(requireContext(), it.message, Toast.LENGTH_SHORT).show()
                     }
-
                     else -> Unit
                 }
             }
         }
     }
 
-    private fun setupRv() {
+    private fun setupRvSubMateri() {
         subMateriAdapter = SubMateriAdapter(requireContext())
 
         binding.rvSubMateri.apply {
@@ -73,6 +87,20 @@ class SubMateriFragment : Fragment() {
             adapter = subMateriAdapter
         }
 
+    }
+
+    private fun showLoading() {
+        binding.apply {
+            shimmerFrame.visibility = View.VISIBLE
+            shimmerFrame.startShimmer()
+        }
+    }
+
+    private fun hideLoading() {
+        binding.apply{
+            shimmerFrame.stopShimmer()
+            shimmerFrame.visibility = View.GONE
+        }
     }
 
 }

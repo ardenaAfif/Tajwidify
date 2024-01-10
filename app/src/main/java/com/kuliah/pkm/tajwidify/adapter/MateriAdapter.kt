@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.kuliah.pkm.tajwidify.data.Materi
 import com.kuliah.pkm.tajwidify.databinding.ItemMateriBinding
-import com.kuliah.pkm.tajwidify.ui.materi.submateri.SubMateriFragmentDirections
+import com.kuliah.pkm.tajwidify.ui.home.HomeFragmentDirections
 
 class MateriAdapter (private val context: Context) :
     RecyclerView.Adapter<MateriAdapter.MateriViewHolder>() {
@@ -57,7 +57,7 @@ class MateriAdapter (private val context: Context) :
         holder.bind(materi)
 
         holder.itemView.setOnClickListener {
-            val action = SubMateriFragmentDirections.actionSubMateriFragmentToModulFragment()
+            val action = HomeFragmentDirections.actionHomeFragmentToSubMateriFragment(materi)
             holder.itemView.findNavController().navigate(action)
         }
     }
