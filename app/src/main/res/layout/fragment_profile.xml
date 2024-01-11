@@ -97,7 +97,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Ganti Password" />
+                    android:text="@string/change_password" />
 
                 <ImageView
                     android:layout_width="15dp"
@@ -119,7 +119,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Keluar" />
+                    android:text="@string/logout" />
 
                 <ImageView
                     android:layout_width="15dp"
@@ -172,7 +172,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Tentang Kami" />
+                    android:text="@string/tentang_kami" />
 
                 <ImageView
                     android:layout_width="15dp"
@@ -194,7 +194,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Privasi" />
+                    android:text="@string/privacy" />
 
                 <ImageView
                     android:layout_width="15dp"
@@ -216,7 +216,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Hubungi Kami" />
+                    android:text="@string/contact_us" />
 
                 <ImageView
                     android:layout_width="15dp"
@@ -251,5 +251,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnRate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/green"
+        android:drawableEnd="@drawable/stars"
+        android:text="Beri Kami Masukan"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_version" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

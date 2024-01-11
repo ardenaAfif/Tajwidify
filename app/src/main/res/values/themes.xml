@@ -15,4 +15,13 @@
     <style name="App.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
         <item name="android:color">@color/transparant</item>
     </style>
+
+    <style name="MyRatingBar" parent="Widget.AppCompat.RatingBar">
+
+        <!--  Non selected color -->
+        <item name="colorControlNormal">@color/shimmer</item>
+
+        <!--   Selected color -->
+        <item name="colorControlActivated">@color/green_light</item>
+    </style>
 </resources>

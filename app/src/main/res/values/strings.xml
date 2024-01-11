@@ -1,13 +1,14 @@
 <resources>
     <string name="app_name">Tajwidify</string>
 
+    <!-- Auth -->
     <string name="password">Password</string>
     <string name="email">Email</string>
     <string name="masuk">Masuk</string>
     <string name="register">Daftar</string>
     <string name="register_desc">Mari belajar Tajwid bersama kami</string>
 
-    // Toolbar Name
+    <!-- Toolbar Name-->
     <string name="doa_harian">Doa Harian</string>
 
 
@@ -16,6 +17,51 @@
     <string name="mim_sukun_tanwin"><![CDATA[Mim Sukun & Tanwin]]></string>
     <string name="nun_sukun_tanwin"><![CDATA[Nun Sukun & Tanwin]]></string>
     <string name="lam">Lam</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Profile Content-->
+    <string name="about_us">Aplikasi \"Tajwidify\" muncul dari kebutuhan untuk meningkatkan pengalaman belajar dan evaluasi pengguna terhadap pemahaman mereka tentang Tajwid. Dengan menggabungkan fitur pre-tes dan post-tes, aplikasi ini bertujuan untuk memberikan manfaat tambahan kepada pengguna dalam memahami prinsip Tajwid secara lebih efektif. Integrasi pre-test dan post-test diharapkan dapat mendukung pengguna dalam menguasai prinsip-prinsip Tajwid dengan lebih baik, menciptakan pengalaman belajar yang lebih bermakna dan interaktif.</string>
+
+    <!-- Profile Menu-->
+    <string name="tentang_kami">Tentang Kami</string>
+    <string name="privacy">Privasi</string>
+    <string name="contact_us">Hubungi Kami</string>
+    <string name="logout">Keluar</string>
+    <string name="change_password">Ganti Password</string>
+
+    <!--Privacy-->
+    <string name="title_privacy">Kebijakan Privasi dan Syarat Penggunaan \nAplikasi \"Tajwidify\"</string>
+    <string name="tanggal_efektif">Tanggal Efektif: 20 Januari 2024</string>
+
+    <string name="pendahuluan_privacy">1. Pendahuluan</string>
+    <string name="content_pendahuluan_privacy">Selamat datang di aplikasi "Tajwidify". Kami berkomitmen untuk melindungi privasi Anda dan memastikan bahwa informasi pribadi Anda dijaga dengan aman. Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, mengungkapkan, dan melindungi informasi pribadi yang Anda berikan saat menggunakan aplikasi "Tajwidify".</string>
+
+    <string name="info_dikumpukan_privacy">2. Informasi yang Kami Kumpulkan</string>
+    <string name="content_info_dikumpulkan_privacy">Kami dapat mengumpulkan informasi pribadi seperti nama, alamat email, informasi kontak, data penggunaan aplikasi, dan tanggapan tes. Informasi ini digunakan untuk meningkatkan pengalaman belajar Anda dan menyediakan layanan yang relevan.</string>
+
+    <string name="penggunaan_info_privacy">3. Penggunaan Informasi</string>
+    <string name="content_penggunaan_info_privacy">Informasi yang kami kumpulkan digunakan untuk:\n
+> Menyediakan, mengoperasikan, dan memelihara aplikasi.\n
+> Memperbaiki, mempersonalisasi, dan memperluas aplikasi.\n
+> Memahami dan menganalisis bagaimana Anda menggunakan aplikasi.\n
+> Mengembangkan fitur, produk, dan layanan baru.\n
+> Berkomunikasi dengan Anda, baik secara langsung atau melalui salah satu mitra kami, termasuk untuk layanan pelanggan, memberikan pembaruan, dan informasi lain terkait dengan aplikasi.
+    </string>
+
+    <string name="perlindungan_data_privacy">4. Perlindungan dan Penyimpanan Data</string>
+    <string name="content_perlindungan_data_privacy">Kami menerapkan berbagai langkah keamanan untuk memastikan keamanan informasi pribadi Anda. Kami berusaha keras untuk melindungi data Anda dari akses, penggunaan, atau pengungkapan yang tidak sah.</string>
+
+    <string name="pembagian_info_privacy">5. Pembagian Informasi</string>
+    <string name="content_pembagian_info_privacy">Kami tidak menjual, menukar, atau menyewakan informasi identifikasi pribadi Anda kepada pihak lain. Kami dapat berbagi informasi generik terkait penggunaan agregat dan informasi demografis yang tidak terkait langsung dengan identifikasi pribadi Anda.</string>
+
+    <string name="contact_us_privacy">6. Kontak Kami</string>
+    <string name="content_contact_us_privacy">Jika Anda memiliki pertanyaan tentang Kebijakan Privasi ini, silakan hubungi kami di tajwidify@gmail.com</string>
+
+    <string name="agreement_privacy">Dengan menggunakan aplikasi "Tajwidify", Anda menyetujui pengumpulan dan penggunaan informasi sesuai dengan kebijakan ini.</string>
+    <string name="tajwidify_privacy">Tajwidify 2024</string>
+
+    <!-- rate Us-->
+    <string name="rate_us_desc">Jika Anda menikmati pengalaman menggunakan aplikasi kami.\n Berikan kami penilaian?</string>
+    <string name="rate_us">Beri Kami Masukan</string>
+    <string name="kritik_saran"><![CDATA[Kritik & Saran]]></string>
+
 </resources>

@@ -2,6 +2,7 @@ package com.kuliah.pkm.tajwidify.ui.profile
 
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -15,11 +16,13 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.kuliah.pkm.tajwidify.R
 import com.kuliah.pkm.tajwidify.databinding.FragmentProfileBinding
 import com.kuliah.pkm.tajwidify.ui.auth.AuthActivity
+import com.kuliah.pkm.tajwidify.ui.profile.rating.RateUsDialog
 import com.kuliah.pkm.tajwidify.utils.Resource
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
@@ -44,22 +47,33 @@ class ProfileFragment : Fragment() {
         actionMenu()
         userProfile()
         getVersion()
+        getRating()
 
         passwordUpdateSetup()
     }
 
+    private fun getRating() {
+        binding.btnRate.setOnClickListener {
+            showRatingDialog()
+        }
+    }
+
     private fun passwordUpdateSetup() {
-        viewModel.passwordUpdateStatus.observe(viewLifecycleOwner, { resource ->
+        viewModel.passwordUpdateStatus.observe(viewLifecycleOwner) { resource ->
             when (resource) {
                 is Resource.Success -> {
-                    Toast.makeText(context, "Password updated successfully", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "Password updated successfully", Toast.LENGTH_SHORT)
+                        .show()
                 }
+
                 is Resource.Error -> {
-                    Toast.makeText(context, resource.message ?: "Unknown error", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, resource.message ?: "Unknown error", Toast.LENGTH_SHORT)
+                        .show()
                 }
+
                 else -> Unit
             }
-        })
+        }
     }
 
     private fun startGallery() {
@@ -91,6 +105,12 @@ class ProfileFragment : Fragment() {
                 val intent = Intent(requireContext(), AuthActivity::class.java)
                 startActivity(intent)
                 requireActivity().finish()
+            }
+            privasiProfile.setOnClickListener {
+                findNavController().navigate(R.id.action_profileFragment_to_privacyFragment)
+            }
+            tntKamiProfile.setOnClickListener {
+                findNavController().navigate(R.id.action_profileFragment_to_aboutFragment)
             }
         }
     }
@@ -198,4 +218,10 @@ class ProfileFragment : Fragment() {
         binding.appVersion.text = "Versi ${info.versionName.toString()}"
     }
 
+    private fun showRatingDialog() {
+        val rateUsDialog = RateUsDialog(requireContext())
+        rateUsDialog.window?.setBackgroundDrawable(ColorDrawable(resources.getColor(R.color.transparant)))
+        rateUsDialog.setCancelable(false)
+        rateUsDialog.show()
+    }
 }
