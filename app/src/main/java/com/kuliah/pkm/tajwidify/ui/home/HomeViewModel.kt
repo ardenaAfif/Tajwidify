@@ -2,7 +2,7 @@ package com.kuliah.pkm.tajwidify.ui.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.kuliah.pkm.tajwidify.data.Materi
+import com.kuliah.pkm.tajwidify.data.Modul
 import com.kuliah.pkm.tajwidify.firebase.FirebaseCommon
 import com.kuliah.pkm.tajwidify.utils.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -16,8 +16,8 @@ class HomeViewModel @Inject constructor(
     private val firestore: FirebaseCommon
 ) : ViewModel() {
 
-    private val _materiList = MutableStateFlow<Resource<List<Materi>>>(Resource.Unspecified())
-    val materiList: StateFlow<Resource<List<Materi>>> = _materiList
+    private val _modulList = MutableStateFlow<Resource<List<Modul>>>(Resource.Unspecified())
+    val modulList: StateFlow<Resource<List<Modul>>> = _modulList
 
 
     init {
@@ -26,13 +26,13 @@ class HomeViewModel @Inject constructor(
 
     private fun fetchMateriList() {
         viewModelScope.launch {
-            _materiList.emit(Resource.Loading())
+            _modulList.emit(Resource.Loading())
             try {
                 val result = firestore.getMateriList()
-                val materiList = result.toObjects(Materi::class.java)
-                _materiList.emit(Resource.Success(materiList))
+                val modulList = result.toObjects(Modul::class.java)
+                _modulList.emit(Resource.Success(modulList))
             } catch (e: Exception) {
-                _materiList.emit(Resource.Error(e.message.toString()))
+                _modulList.emit(Resource.Error(e.message.toString()))
             }
         }
     }

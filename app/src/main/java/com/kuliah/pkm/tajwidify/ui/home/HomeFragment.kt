@@ -54,7 +54,7 @@ class HomeFragment : Fragment() {
 
     private fun materiSetup() {
         lifecycleScope.launchWhenStarted {
-            materiViewModel.materiList.collectLatest {
+            materiViewModel.modulList.collectLatest {
                 when(it) {
                     is Resource.Loading -> {
                         showLoading()

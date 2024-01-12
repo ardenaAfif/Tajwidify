@@ -9,12 +9,10 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
-import androidx.navigation.NavArgs
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.kuliah.pkm.tajwidify.adapter.SubMateriAdapter
-import com.kuliah.pkm.tajwidify.data.SubMateri
 import com.kuliah.pkm.tajwidify.databinding.FragmentSubMateriBinding
 import com.kuliah.pkm.tajwidify.utils.Resource
 import dagger.hilt.android.AndroidEntryPoint
@@ -59,7 +57,7 @@ class SubMateriFragment : Fragment() {
 
     private fun subMateriSetup() {
         lifecycleScope.launchWhenStarted {
-            viewModel.subMateriList.collectLatest {
+            viewModel.subModulList.collectLatest {
                 when(it) {
                     is Resource.Loading -> {
                         showLoading()

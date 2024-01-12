@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.kuliah.pkm.tajwidify.data.SubMateri
+import com.kuliah.pkm.tajwidify.data.SubModul
 import com.kuliah.pkm.tajwidify.databinding.ItemSubmateriBinding
 import com.kuliah.pkm.tajwidify.ui.materi.submateri.SubMateriFragmentDirections
 
@@ -16,24 +16,24 @@ class SubMateriAdapter(private val context: Context) :
     RecyclerView.Adapter<SubMateriAdapter.SubMateriViewHolder>() {
     inner class SubMateriViewHolder(private val binding: ItemSubmateriBinding) :
         RecyclerView.ViewHolder(binding.root) {
-            fun bind(subMateri: SubMateri) {
+            fun bind(subModul: SubModul) {
                 binding.apply {
-                    tvTitle.text = subMateri.title
+                    tvTitle.text = subModul.title
 
                     Glide.with(itemView)
-                        .load(subMateri.imgUrl)
+                        .load(subModul.imgUrl)
                         .centerCrop()
                         .into(ivSubmateri)
                 }
             }
     }
 
-    private val diffCallback = object : DiffUtil.ItemCallback<SubMateri>() {
-        override fun areItemsTheSame(oldItem: SubMateri, newItem: SubMateri): Boolean {
+    private val diffCallback = object : DiffUtil.ItemCallback<SubModul>() {
+        override fun areItemsTheSame(oldItem: SubModul, newItem: SubModul): Boolean {
             return oldItem == newItem
         }
 
-        override fun areContentsTheSame(oldItem: SubMateri, newItem: SubMateri): Boolean {
+        override fun areContentsTheSame(oldItem: SubModul, newItem: SubModul): Boolean {
             return oldItem == newItem
         }
     }

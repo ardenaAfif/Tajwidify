@@ -33,7 +33,7 @@
             app:destination="@id/subMateriFragment" />
         <argument
             android:name="Materi"
-            app:argType="com.kuliah.pkm.tajwidify.data.Materi" />
+            app:argType="com.kuliah.pkm.tajwidify.data.Modul" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -57,7 +57,7 @@
             app:destination="@id/modulFragment" />
         <argument
             android:name="subMateri"
-            app:argType="com.kuliah.pkm.tajwidify.data.Materi" />
+            app:argType="com.kuliah.pkm.tajwidify.data.Modul" />
     </fragment>
     <fragment
         android:id="@+id/modulFragment"

@@ -2,8 +2,8 @@ package com.kuliah.pkm.tajwidify.ui.materi.submateri
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.kuliah.pkm.tajwidify.data.Materi
-import com.kuliah.pkm.tajwidify.data.SubMateri
+import com.kuliah.pkm.tajwidify.data.Modul
+import com.kuliah.pkm.tajwidify.data.SubModul
 import com.kuliah.pkm.tajwidify.firebase.FirebaseCommon
 import com.kuliah.pkm.tajwidify.utils.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -17,30 +17,26 @@ class SubMateriViewModel @Inject constructor(
     private val firebaseCommon: FirebaseCommon
 ) : ViewModel() {
 
-    private val _subMateriList = MutableStateFlow<Resource<List<SubMateri>>>(Resource.Unspecified())
-    val subMateriList: StateFlow<Resource<List<SubMateri>>> = _subMateriList
+    private val _subModulList = MutableStateFlow<Resource<List<SubModul>>>(Resource.Unspecified())
+    val subModulList: StateFlow<Resource<List<SubModul>>> = _subModulList
 
-    var materi: Materi? = null
+    var modul: Modul? = null
 
-//    init {
-//        fetchSubMateri()
-//    }
-
-    fun setSubMateri(materi: Materi) {
-        this.materi = materi
+    fun setSubMateri(modul: Modul) {
+        this.modul = modul
         fetchSubMateri()
     }
 
     private fun fetchSubMateri() {
-        materi?.let {
+        modul?.let {
             viewModelScope.launch {
-                _subMateriList.emit(Resource.Loading())
+                _subModulList.emit(Resource.Loading())
                 try {
-                    val result = firebaseCommon.getSubMateri(materi!!.materiId)
-                    val subMateriList = result.toObjects(SubMateri::class.java)
-                    _subMateriList.emit(Resource.Success(subMateriList))
+                    val result = firebaseCommon.getSubMateri(modul!!.materiId)
+                    val subModulList = result.toObjects(SubModul::class.java)
+                    _subModulList.emit(Resource.Success(subModulList))
                 } catch (e: Exception) {
-                    _subMateriList.emit(Resource.Error(e.message ?: "Error occurred"))
+                    _subModulList.emit(Resource.Error(e.message ?: "Error occurred"))
                 }
             }
         }
