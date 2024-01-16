@@ -8,11 +8,11 @@ import kotlinx.parcelize.Parcelize
 data class Modul(
     @DocumentId
     val materiId: String,
-    val isPretest: Boolean,
+    val isPretest: Boolean?,
     val imgUrl: String,
     val question: Long,
     val title: String,
     val urutan: Int
 ) : Parcelable {
-    constructor() : this("", false, "", 0L,"",0)
+    constructor() : this("", null, "", 0L,"",0)
 }

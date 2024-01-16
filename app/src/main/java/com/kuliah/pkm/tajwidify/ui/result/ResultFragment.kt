@@ -6,13 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
+import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.kuliah.pkm.tajwidify.R
 import com.kuliah.pkm.tajwidify.databinding.FragmentResultBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ResultFragment : Fragment() {
 
 
@@ -60,6 +63,17 @@ class ResultFragment : Fragment() {
                 findNavController().navigate(ResultFragmentDirections.actionResultFragmentToSubMateriFragment(result))
             }
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        val callback = object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                findNavController().navigate(R.id.action_resultFragment_to_homeFragment)
+            }
+        }
+
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, callback)
     }
 
 }

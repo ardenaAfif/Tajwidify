@@ -89,7 +89,7 @@ class QuizFragment : Fragment() {
         quizViewModel.shouldNavigateToResult.observe(viewLifecycleOwner, Observer {
             if (it) {
                 this.findNavController()
-//                    .navigate(QuizFragmentDirections.actionQuizFragmentToResultFragment(args.Modul))
+                    .navigate(QuizFragmentDirections.actionQuizFragmentToResultFragment(args.Modul))
                 quizViewModel.navigateToResultPageComplete()
             }
         })

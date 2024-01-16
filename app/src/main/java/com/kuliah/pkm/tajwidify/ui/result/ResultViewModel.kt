@@ -6,7 +6,6 @@ import androidx.lifecycle.ViewModel
 import com.google.firebase.firestore.toObject
 import com.kuliah.pkm.tajwidify.data.Modul
 import com.kuliah.pkm.tajwidify.data.Result
-import com.kuliah.pkm.tajwidify.data.User
 import com.kuliah.pkm.tajwidify.firebase.FirebaseCommon
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineScope

@@ -36,4 +36,8 @@ class HomeViewModel @Inject constructor(
             }
         }
     }
+
+    fun refreshMateriList() {
+        fetchMateriList()
+    }
 }

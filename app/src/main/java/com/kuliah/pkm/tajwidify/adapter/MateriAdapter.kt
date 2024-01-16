@@ -1,6 +1,7 @@
 package com.kuliah.pkm.tajwidify.adapter
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.findNavController
@@ -57,7 +58,12 @@ class MateriAdapter (private val context: Context) :
         holder.bind(materi)
 
         holder.itemView.setOnClickListener {
-            val action = HomeFragmentDirections.actionHomeFragmentToQuizFragment(materi)
+            Log.d("MateriAdapter", "isPretest: ${materi.isPretest}")
+            val action = if (materi.isPretest == true) {
+                HomeFragmentDirections.actionHomeFragmentToSubMateriFragment(materi)
+            } else {
+                HomeFragmentDirections.actionHomeFragmentToQuizFragment(materi)
+            }
             holder.itemView.findNavController().navigate(action)
         }
     }

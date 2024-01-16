@@ -6,12 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.kuliah.pkm.tajwidify.R
 import com.kuliah.pkm.tajwidify.adapter.SubMateriAdapter
 import com.kuliah.pkm.tajwidify.databinding.FragmentSubMateriBinding
 import com.kuliah.pkm.tajwidify.utils.Resource
@@ -99,6 +101,17 @@ class SubMateriFragment : Fragment() {
             shimmerFrame.stopShimmer()
             shimmerFrame.visibility = View.GONE
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        val callback = object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                findNavController().navigate(R.id.action_subMateriFragment_to_homeFragment)
+            }
+        }
+
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, callback)
     }
 
 }

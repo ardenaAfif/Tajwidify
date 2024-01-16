@@ -42,6 +42,11 @@ class HomeFragment : Fragment() {
         setupRvMateri()
         materiSetup()
         getUser()
+        onQuizCompleted()
+    }
+
+    private fun onQuizCompleted() {
+        materiViewModel.refreshMateriList()
     }
 
     private fun setupRvMateri() {

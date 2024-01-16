@@ -61,6 +61,9 @@
         <argument
             android:name="Materi"
             app:argType="com.kuliah.pkm.tajwidify.data.Modul" />
+        <action
+            android:id="@+id/action_subMateriFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/modulFragment"
@@ -104,5 +107,8 @@
         <argument
             android:name="Modul"
             app:argType="com.kuliah.pkm.tajwidify.data.Modul" />
+        <action
+            android:id="@+id/action_resultFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
 </navigation>
