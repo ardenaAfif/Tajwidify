@@ -7,4 +7,7 @@
 
     <color name="green">#2AAE63</color>
     <color name="green_light">#00FF0D</color>
+
+    <color name="colorWrong">#B00200</color>
+    <color name="colorCorrect">#20b000</color>
 </resources>

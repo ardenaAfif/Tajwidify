@@ -57,7 +57,7 @@ class MateriAdapter (private val context: Context) :
         holder.bind(materi)
 
         holder.itemView.setOnClickListener {
-            val action = HomeFragmentDirections.actionHomeFragmentToSubMateriFragment(materi)
+            val action = HomeFragmentDirections.actionHomeFragmentToQuizFragment(materi)
             holder.itemView.findNavController().navigate(action)
         }
     }

@@ -37,7 +37,7 @@ class SubMateriFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val materi = args.subMateri
+        val materi = args.Materi
         viewModel.setSubMateri(materi)
         setupRvSubMateri()
         subMateriSetup()
@@ -45,7 +45,7 @@ class SubMateriFragment : Fragment() {
     }
 
     private fun customToolbar() {
-        val materi = args.subMateri
+        val materi = args.Materi
 
         binding.apply {
             toolbar.navBack.setOnClickListener {

@@ -57,7 +57,7 @@ class SubMateriAdapter(private val context: Context) :
         holder.bind(subMateri)
 
         holder.itemView.setOnClickListener {
-            val action = SubMateriFragmentDirections.actionSubMateriFragmentToModulFragment()
+            val action = SubMateriFragmentDirections.actionSubMateriFragmentToModulFragment(subMateri)
             holder.itemView.findNavController().navigate(action)
         }
     }

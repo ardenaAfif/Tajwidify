@@ -28,6 +28,13 @@
     <string name="logout">Keluar</string>
     <string name="change_password">Ganti Password</string>
 
+    <!-- Result -->
+    <string name="congrats">Selamat!</string>
+    <string name="try_again">Yuk Belajar!</string>
+
+    <string name="congrats_message">Selamat kamu berhasil mengerjakan Pre Test, yuk Perdalam lagi Ilmu Tajwid</string>
+    <string name="failed_message">Yuk belajar Tajwid lebih semangat</string>
+
     <!--Privacy-->
     <string name="title_privacy">Kebijakan Privasi dan Syarat Penggunaan \nAplikasi \"Tajwidify\"</string>
     <string name="tanggal_efektif">Tanggal Efektif: 20 Januari 2024</string>
@@ -63,5 +70,8 @@
     <string name="rate_us_desc">Jika Anda menikmati pengalaman menggunakan aplikasi kami.\n Berikan kami penilaian?</string>
     <string name="rate_us">Beri Kami Masukan</string>
     <string name="kritik_saran"><![CDATA[Kritik & Saran]]></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="score_over">%1$d/%2$d\n</string>
 
 </resources>
