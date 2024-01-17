@@ -2,11 +2,11 @@ package com.kuliah.pkm.tajwidify.ui.home
 
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -14,10 +14,13 @@ import com.bumptech.glide.Glide
 import com.kuliah.pkm.tajwidify.R
 import com.kuliah.pkm.tajwidify.adapter.MateriAdapter
 import com.kuliah.pkm.tajwidify.databinding.FragmentHomeBinding
-import com.kuliah.pkm.tajwidify.utils.Resource
 import com.kuliah.pkm.tajwidify.ui.profile.ProfileViewModel
+import com.kuliah.pkm.tajwidify.utils.Resource
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 @AndroidEntryPoint
 class HomeFragment : Fragment() {
@@ -43,6 +46,7 @@ class HomeFragment : Fragment() {
         materiSetup()
         getUser()
         onQuizCompleted()
+        updateCurrentDate()
     }
 
     private fun onQuizCompleted() {
@@ -118,6 +122,17 @@ class HomeFragment : Fragment() {
             shimmerFrame.stopShimmer()
             shimmerFrame.visibility = View.GONE
         }
+    }
+
+    // Update current date
+    private fun updateCurrentDate() {
+        val currentDate = getCurrentDate()
+        binding.prayerDate.text = currentDate
+    }
+
+    private fun getCurrentDate(): String {
+        val dateFormat = SimpleDateFormat("EEEE, dd MMMM yyyy", Locale("id", "ID"))
+        return dateFormat.format(Date())
     }
 
 }

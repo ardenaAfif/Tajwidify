@@ -157,7 +157,7 @@ class QuizViewModel @Inject constructor(
         _questionTime.value = timeToAnswer.toString()
 
         // Start Countdown
-        timer = object : CountDownTimer(timeToAnswer + 15000, 15) {
+        timer = object : CountDownTimer(timeToAnswer + 20000, 20) {
             override fun onTick(milisUntilFinished: Long) {
                 _questionTime.value = (milisUntilFinished / 1000).toString()
 

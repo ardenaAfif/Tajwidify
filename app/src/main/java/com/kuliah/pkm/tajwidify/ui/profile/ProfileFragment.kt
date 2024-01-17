@@ -170,7 +170,6 @@ class ProfileFragment : Fragment() {
     }
 
 
-
     private fun userProfile() {
         lifecycleScope.launchWhenStarted {
             viewModel.user.collectLatest {

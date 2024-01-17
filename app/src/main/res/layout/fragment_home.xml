@@ -13,8 +13,8 @@
         android:background="@drawable/bg_toolbar"
         android:orientation="horizontal"
         android:paddingStart="30dp"
-        android:paddingEnd="20dp"
         android:paddingTop="10dp"
+        android:paddingEnd="20dp"
         android:paddingBottom="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,6 +35,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_regular"
                 android:text="Assalamu'alaikum"
+                android:textStyle="italic"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -57,23 +58,106 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center_vertical"
+            android:src="@drawable/logo_bulet"
             app:civ_border_color="@color/white"
-            app:civ_border_width="3dp"
-            android:src="@drawable/logo_bulet" />
+            app:civ_border_width="3dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cardPrayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bg_card_prayer"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:layout_editor_absoluteX="15dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/prayerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Waktu Dhuhur"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/prayerTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="11:47"
+                android:textColor="@color/green"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/prayerDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                tools:text="Selasa, 16 Januari 2024" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/prayerDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="italic"
+                    android:fontFamily="@font/poppins_light"
+                    android:textColor="@color/black"
+                    android:textSize="11sp"
+                    android:text="Lihat detail " />
+
+                <ImageView
+                    android:layout_width="7dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="2dp"
+                    android:src="@drawable/ic_double_arrow_next" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="0.5"
+            android:src="@drawable/ic_prayer" />
     </LinearLayout>
 
     <TextView
         android:id="@+id/leaning_path"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/poppins_bold"
         android:text="Alur Belajar"
         android:textColor="@color/black"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
         android:textSize="21sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/cardPrayer" />
 
     <com.facebook.shimmer.ShimmerFrameLayout
         android:id="@+id/shimmerFrame"
@@ -90,12 +174,17 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <include layout="@layout/item_shimer"/>
-            <include layout="@layout/item_shimer"/>
-            <include layout="@layout/item_shimer"/>
-            <include layout="@layout/item_shimer"/>
-            <include layout="@layout/item_shimer"/>
-            <include layout="@layout/item_shimer"/>
+            <include layout="@layout/item_shimer" />
+
+            <include layout="@layout/item_shimer" />
+
+            <include layout="@layout/item_shimer" />
+
+            <include layout="@layout/item_shimer" />
+
+            <include layout="@layout/item_shimer" />
+
+            <include layout="@layout/item_shimer" />
         </LinearLayout>
     </com.facebook.shimmer.ShimmerFrameLayout>
 
@@ -103,12 +192,12 @@
         android:id="@+id/rvMateri"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        tools:itemCount="6"
         android:layout_marginTop="10dp"
-        tools:listitem="@layout/item_materi"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/leaning_path" />
+        app:layout_constraintTop_toBottomOf="@+id/leaning_path"
+        tools:itemCount="6"
+        tools:listitem="@layout/item_materi" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
