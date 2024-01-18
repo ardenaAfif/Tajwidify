@@ -4,20 +4,11 @@ import com.google.gson.annotations.SerializedName
 
 data class PrayerResponse(
 
-	@field:SerializedName("request")
-	val request: Request,
-
 	@field:SerializedName("data")
 	val data: Data,
 
 	@field:SerializedName("status")
 	val status: Boolean
-)
-
-data class Request(
-
-	@field:SerializedName("path")
-	val path: String
 )
 
 data class Data(

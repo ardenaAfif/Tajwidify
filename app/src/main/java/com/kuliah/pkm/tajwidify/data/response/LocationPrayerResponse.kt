@@ -4,9 +4,6 @@ import com.google.gson.annotations.SerializedName
 
 data class LocationPrayerResponse(
 
-	@field:SerializedName("request")
-	val request: Request,
-
 	@field:SerializedName("data")
 	val data: List<DataItem>,
 

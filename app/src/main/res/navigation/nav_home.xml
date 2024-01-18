@@ -37,6 +37,9 @@
         <action
             android:id="@+id/action_homeFragment_to_quizFragment"
             app:destination="@id/quizFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_jadwalSholatFragment"
+            app:destination="@id/jadwalSholatFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -111,4 +114,9 @@
             android:id="@+id/action_resultFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/jadwalSholatFragment"
+        android:name="com.kuliah.pkm.tajwidify.ui.prayer.JadwalSholatFragment"
+        android:label="fragment_jadwal_sholat"
+        tools:layout="@layout/fragment_jadwal_sholat" />
 </navigation>

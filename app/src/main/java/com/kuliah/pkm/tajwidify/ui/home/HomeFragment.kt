@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.kuliah.pkm.tajwidify.R
@@ -47,6 +48,15 @@ class HomeFragment : Fragment() {
         getUser()
         onQuizCompleted()
         updateCurrentDate()
+        jadwalSholat()
+    }
+
+    private fun jadwalSholat() {
+        binding.apply {
+            cardPrayer.setOnClickListener {
+                findNavController().navigate(R.id.action_homeFragment_to_jadwalSholatFragment)
+            }
+        }
     }
 
     private fun onQuizCompleted() {
