@@ -14,12 +14,15 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.kuliah.pkm.tajwidify.R
 import com.kuliah.pkm.tajwidify.adapter.MateriAdapter
+import com.kuliah.pkm.tajwidify.data.response.Jadwal
 import com.kuliah.pkm.tajwidify.databinding.FragmentHomeBinding
+import com.kuliah.pkm.tajwidify.ui.prayer.JadwalSholatViewModel
 import com.kuliah.pkm.tajwidify.ui.profile.ProfileViewModel
 import com.kuliah.pkm.tajwidify.utils.Resource
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import java.text.SimpleDateFormat
+import java.util.Calendar
 import java.util.Date
 import java.util.Locale
 
@@ -31,6 +34,7 @@ class HomeFragment : Fragment() {
 
     private val materiViewModel by viewModels<HomeViewModel>()
     private lateinit var materiAdapter: MateriAdapter
+    private val jadwalSholatViewModel: JadwalSholatViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -47,8 +51,56 @@ class HomeFragment : Fragment() {
         materiSetup()
         getUser()
         onQuizCompleted()
-        updateCurrentDate()
+
         jadwalSholat()
+        jadwalSholatViewModel.fetchPrayerTimesForToday("1621")
+        observeNextJadwalSholat()
+    }
+
+    private fun observeNextJadwalSholat() {
+        jadwalSholatViewModel.prayerTimes.observe(viewLifecycleOwner) {prayerResponse ->
+            val nextPlayerTime = getNextPlayerTime(prayerResponse.data.jadwal)
+            updatePrayerTimeUi(nextPlayerTime)
+
+            updateCurrentDate(prayerResponse.data.jadwal.tanggal)
+        }
+    }
+
+    private fun getNextPlayerTime(jadwal: Jadwal): Pair<String, String> {
+        val currentTime = Calendar.getInstance()
+
+        val formatter = SimpleDateFormat("HH:mm", Locale("id", "ID"))
+        val times = listOf(
+            "Subuh" to formatter.parse(jadwal.subuh),
+            "Dhuhur" to formatter.parse(jadwal.dzuhur),
+            "Asar" to formatter.parse(jadwal.ashar),
+            "Maghrib" to formatter.parse(jadwal.maghrib),
+            "Isya" to formatter.parse(jadwal.isya)
+        )
+
+        for ((name, time) in times) {
+            if (time != null && time.after(currentTime.time)) {
+                return name to formatter.format(time)
+            }
+        }
+
+        // If no future time is found (e.g., late night), return the first prayer time of the next day
+        return "Asar" to formatter.format(formatter.parse(jadwal.ashar))
+    }
+
+    private fun updatePrayerTimeUi(nextPrayerTime: Pair<String, String>) {
+        binding.prayerName.text = "Waktu ${nextPrayerTime.first}"
+        binding.prayerTime.text = nextPrayerTime.second
+    }
+
+    private fun updateCurrentDate(apiDate: String) {
+        // Assuming apiDate is in the format "EEEE, dd/MM/yyyy"
+        val originalFormat = SimpleDateFormat("EEEE, dd/MM/yyyy", Locale("id", "ID"))
+        val targetFormat = SimpleDateFormat("EEEE, dd MMMM yyyy", Locale("id", "ID"))
+        val date = originalFormat.parse(apiDate)
+        val formattedDate = targetFormat.format(date ?: Date())
+
+        binding.prayerDate.text = formattedDate
     }
 
     private fun jadwalSholat() {
@@ -132,17 +184,6 @@ class HomeFragment : Fragment() {
             shimmerFrame.stopShimmer()
             shimmerFrame.visibility = View.GONE
         }
-    }
-
-    // Update current date
-    private fun updateCurrentDate() {
-        val currentDate = getCurrentDate()
-        binding.prayerDate.text = currentDate
-    }
-
-    private fun getCurrentDate(): String {
-        val dateFormat = SimpleDateFormat("EEEE, dd MMMM yyyy", Locale("id", "ID"))
-        return dateFormat.format(Date())
     }
 
 }

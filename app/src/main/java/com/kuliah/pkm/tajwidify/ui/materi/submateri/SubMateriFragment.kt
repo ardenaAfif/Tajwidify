@@ -51,7 +51,7 @@ class SubMateriFragment : Fragment() {
 
         binding.apply {
             toolbar.navBack.setOnClickListener {
-                findNavController().navigateUp()
+                findNavController().navigate(R.id.action_subMateriFragment_to_homeFragment)
             }
             toolbar.tvToolbarName.text = materi.title
         }
