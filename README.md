@@ -52,7 +52,9 @@ TBA
 > ## How to Install
 1. Download Tajwidify App
 
-    Download App (TBA)
+<a href="https://github.com/ardenaAfif/Tajwidify/releases/download/1.0.0/Tajwidify.apk" target="_blank">
+  <img src="https://github.com/ardenaAfif/Tajwidify/blob/master/Mockup%20Fix/download.png" alt="Logo AMOLED" width="200">
+</a>
 
 2. How to clone this Project
 
