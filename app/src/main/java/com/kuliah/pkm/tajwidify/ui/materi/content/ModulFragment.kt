@@ -45,6 +45,7 @@ class ModulFragment : Fragment() {
 
     private fun loadDataBasedOnTitle(title: String) {
         when(title) {
+            // Nun Sukun dan Tanwin
             "Idhar Halqi" -> {
                 titles = resources.getStringArray(R.array.title_idhar_halqi)
                 contents = resources.getStringArray(R.array.materi_idhar_halqi)
@@ -61,6 +62,25 @@ class ModulFragment : Fragment() {
                 titles = resources.getStringArray(R.array.title_idgham_bigunnah)
                 contents = resources.getStringArray(R.array.materi_idgham_bigunnah)
             }
+            "Ikhfa Haqiqi" -> {
+                titles = resources.getStringArray(R.array.title_ikhfa)
+                contents = resources.getStringArray(R.array.materi_ikhfa)
+            }
+
+            // Mim Sukun dan Tanwin
+            "Idhgam Mistly (Mimi)" -> {
+                titles = resources.getStringArray(R.array.title_idgham_mimi)
+                contents = resources.getStringArray(R.array.materi_idgham_mimi)
+            }
+            "Ikhfa’ Syafawi" -> {
+                titles = resources.getStringArray(R.array.title_ikhfa_syafawi)
+                contents = resources.getStringArray(R.array.materi_ikhfa_syafawi)
+            }
+            "Idhar Syafawi" -> {
+                titles = resources.getStringArray(R.array.title_idhar_syafawi)
+                contents = resources.getStringArray(R.array.materi_idhar_syafawi)
+            }
+
             else -> {
                 // Default atau error handling
                 titles = arrayOf("Unknown Title")

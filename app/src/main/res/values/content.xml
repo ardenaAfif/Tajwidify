@@ -76,9 +76,54 @@
     </string-array>
 
     <string-array name="materi_ikhfa">
-        <item>khfa\' haqiqi adalah salah satu hukum bacaan nun sukun dan tanwin. Ikhfa\' haqiqi terjadi apabila nun sukun atau tanwin bertemu dengan salah satu dari 15 huruf ikhfa' haqiqi.</item>
+        <item>Ikhfa\' haqiqi adalah salah satu hukum bacaan nun sukun dan tanwin. Ikhfa\' haqiqi terjadi apabila nun sukun atau tanwin bertemu dengan salah satu dari 15 huruf ikhfa' haqiqi.</item>
         <item>ت n\ (ta) ث (tsa) n\ ج (jim) n\ د (dal) n\ ذ (dhal) n\ ز (zai) n\ س (sin) n\ ش (syin)n\ ص (sad)n\ ض (dhad)n\ ط (tha)n\ ظ (zha)n\ ف (fa)n\ ق (qaf)n\ ك (kaf)</item>
         <item>Melepaskan bunyi nun sukun atau tanwin sedikit saja, kemudian disambung dengan huruf sesudahnya. Nun sukun atau tanwin disamarkan atau disembunyikan dengan cara melepaskan bunyinya sedikit saja dan disertai dengan dengung.</item>
         <item>لَقَدْ خَلَقْنَا ٱلْإِنسَٰنَِ \n مِنْ قَبْلِهِِ</item>
+    </string-array>
+
+    // Idhar Syafawi
+    <string-array name="title_idhar_syafawi">
+        <item>Pengertian Idhar Syafawi</item>
+        <item>Huruf – Huruf Idhar Syafawi :</item>
+        <item>Cara Membacanya</item>
+        <item>Contoh Idhar Syafawi</item>
+    </string-array>
+
+    <string-array name="materi_idhar_syafawi">
+        <item>Idhar Syafawi berlaku apabila huruf mim mati bertemu salah satu huruf hijaiyyah selain huruf mim dan huruf ba\'.</item>
+        <item>Semua huruf Hijaiyah selain huruf mim dan huruf ba\'.</item>
+        <item>Izhar Syafawi harus dilafalkan dengan jelas pada bibir sambil menutup mulut.</item>
+        <item>  خَلْفِهِمْ وَعَنْ \n  فَجَعَلَهُمْ كَعَصْفٍ مَّأْكُوْلٍِِ</item>
+    </string-array>
+
+    // Ikhfa’ Syafawi
+    <string-array name="title_ikhfa_syafawi">
+        <item>Pengertian Ikhfa Syafawi</item>
+        <item>Huruf – Huruf Ikhfa Syafawi :</item>
+        <item>Cara Membacanya</item>
+        <item>Contoh Ikhfa Syafawi</item>
+    </string-array>
+
+    <string-array name="materi_ikhfa_syafawi">
+        <item>Ikhfa’ syafawi jika ada mim sukun yang bertemu dengan huruf ب</item>
+        <item>  ب (ba)</item>
+        <item>Cara membacanya dengung, yaitu mim sukun dibaca bergandengan dengan huruf ب.</item>
+        <item>  تَرْمِيهِم بِحِجَارَةٍ \n وَمَا هُمْ بِمُؤْمِنِينَِِ</item>
+    </string-array>
+
+    // Idhgam Mistly (Mimi)
+    <string-array name="title_idgham_mimi">
+        <item>Pengertian Idhgam Mistly (Mimi)</item>
+        <item>Huruf – Huruf Idhgam Mistly (Mimi) :</item>
+        <item>Cara Membacanya</item>
+        <item>Contoh Idhgam Mistly (Mimi)</item>
+    </string-array>
+
+    <string-array name="materi_idgham_mimi">
+        <item>Idgham mitsly adalah apabila mim sukun bertemu dengan huruf mim.</item>
+        <item> م (mim)</item>
+        <item>Membaca huruf mim rangkap secara mendengung.</item>
+        <item>  أَيْمَانُكُمْ مِنْ  \n   اِنَّهَا عَلَيْهِمْ مُّؤْصَدَةٌِِۙ</item>
     </string-array>
 </resources>
