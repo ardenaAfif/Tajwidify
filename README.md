@@ -25,11 +25,6 @@ The "Tajwidify" project emerged from the need to enhance the learning experience
 | <img src="https://github.com/ardenaAfif/Tajwidify/blob/master/Mockup%20Fix/daftar.jpg" width="200" height="500"> | <img src="https://github.com/ardenaAfif/Tajwidify/blob/master/Mockup%20Fix/login.jpg" width="200" height="500"> | <img src="https://github.com/ardenaAfif/Tajwidify/blob/master/Mockup%20Fix/home.jpg" width="200" height="500"> | <img src="https://github.com/ardenaAfif/Tajwidify/blob/master/Mockup%20Fix/subBab.jpg" width="200" height="500"> |
 | <img src="https://github.com/ardenaAfif/Tajwidify/blob/master/Mockup%20Fix/doa.jpg" width="200" height="500"> | <img src="https://github.com/ardenaAfif/Tajwidify/blob/master/Mockup%20Fix/quiz.jpg" width="200" height="500"> | <img src="https://github.com/ardenaAfif/Tajwidify/blob/master/Mockup%20Fix/result.jpg" width="200" height="500"> | <img src="https://github.com/ardenaAfif/Tajwidify/blob/master/Mockup%20Fix/profile.jpg" width="200" height="500"> |
 
-> ## Demo Application
-<!-- ![Demo App](images/Demo.gif) -->
-TBA
-<!-- <img src="images/Demo.gif" alt="Alt Text" width="200" /> -->
-
 > ## Development Roadmap
 - [Kotlin](https://kotlinlang.org/)
 - [Glide](https://github.com/bumptech/glide)
@@ -52,7 +47,7 @@ TBA
 > ## How to Install
 1. Download Tajwidify App
 
-<a href="https://github.com/ardenaAfif/Tajwidify/releases/download/1.0.0/Tajwidify.apk" target="_blank">
+<a href="https://github.com/ardenaAfif/Tajwidify/releases/download/1.1.1/Tajwidify.apk" target="_blank">
   <img src="https://github.com/ardenaAfif/Tajwidify/blob/master/Mockup%20Fix/download.png" alt="Logo AMOLED" width="200">
 </a>
 
