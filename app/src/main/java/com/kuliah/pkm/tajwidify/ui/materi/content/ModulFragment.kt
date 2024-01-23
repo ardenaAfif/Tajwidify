@@ -81,6 +81,42 @@ class ModulFragment : Fragment() {
                 contents = resources.getStringArray(R.array.materi_idhar_syafawi)
             }
 
+            // Lam
+            "Lam Tafkhim" -> {
+                titles = resources.getStringArray(R.array.title_lam_tafkhim)
+                contents = resources.getStringArray(R.array.materi_lam_tafkhim)
+            }
+            "Lam Tarqiq" -> {
+                titles = resources.getStringArray(R.array.title_lam_tarqiq)
+                contents = resources.getStringArray(R.array.materi_lam_tarqiq)
+            }
+
+            // Alif Lam
+            "Alif Lam Syamsiyah" -> {
+                titles = resources.getStringArray(R.array.title_aliflam_syamsiyah)
+                contents = resources.getStringArray(R.array.materi_aliflam_syamsiyah)
+            }
+            "Alif Lam Qamariyah" -> {
+                titles = resources.getStringArray(R.array.title_aliflam_qomariyah)
+                contents = resources.getStringArray(R.array.materi_aliflam_qomariyah)
+            }
+
+            // Gunnah
+            "Ghunnah" -> {
+                titles = resources.getStringArray(R.array.materi_gunnah)
+                contents = resources.getStringArray(R.array.title_gunnah)
+            }
+
+            // Qalqalah
+            "Qalqalah Sugra" -> {
+                titles = resources.getStringArray(R.array.title_qolqolah_sugra)
+                contents = resources.getStringArray(R.array.materi_qolqolah_sugra)
+            }
+            "Qalqalah Kubro" -> {
+                titles = resources.getStringArray(R.array.title_qolqolah_kubro)
+                contents = resources.getStringArray(R.array.materi_qolqolah_kubro)
+            }
+
             else -> {
                 // Default atau error handling
                 titles = arrayOf("Unknown Title")

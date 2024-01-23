@@ -7,7 +7,7 @@
         <item>4</item>
     </integer-array>
 
-    // Idhar Halqi
+    <!--Idhar Halqi-->
     <string-array name="title_idhar_halqi">
         <item>Pengertian Idhar Halqi</item>
         <item>Huruf – Huruf Idhar Halqi :</item>
@@ -22,7 +22,7 @@
         <item>مِنْ أَهْل</item>
     </string-array>
 
-    // Idgham Bilagunnah
+    <!--Idgham Bilagunnah-->
     <string-array name="title_idgham_bilagunnah">
         <item>Pengertian Idgham Bilagunnah</item>
         <item>Huruf – Huruf Idgham Bilagunnah :</item>
@@ -37,7 +37,7 @@
         <item> مِنْ لَدُنْهِ \n مِنْ رَبِّهِ</item>
     </string-array>
 
-    // Idgham Bigunnah
+    <!--Idgham Bigunnah-->
     <string-array name="title_idgham_bigunnah">
         <item>Pengertian Idgham Bigunnah</item>
         <item>Huruf – Huruf Idgham Bigunnah :</item>
@@ -52,7 +52,7 @@
         <item>مِنْ مَالِهِ \n لَنْ نَتْرُكَ \n إِنْ يَرَوْكَ</item>
     </string-array>
 
-    // Iqlab
+    <!--Iqlab-->
     <string-array name="title_iqlab">
         <item>Pengertian Iqlab</item>
         <item>Huruf – Huruf Iqlab :</item>
@@ -67,7 +67,7 @@
         <item>مِنْ بَعْدِ \n مِنْ بَطْنِ</item>
     </string-array>
 
-    // Ikhfa Haqiqi
+    <!-- Ikhfa Haqiqi-->
     <string-array name="title_ikhfa">
         <item>Pengertian Ikhfa Haqiqi</item>
         <item>Huruf – Huruf Ikhfa Haqiqi :</item>
@@ -76,13 +76,13 @@
     </string-array>
 
     <string-array name="materi_ikhfa">
-        <item>Ikhfa\' haqiqi adalah salah satu hukum bacaan nun sukun dan tanwin. Ikhfa\' haqiqi terjadi apabila nun sukun atau tanwin bertemu dengan salah satu dari 15 huruf ikhfa' haqiqi.</item>
+        <item>Ikhfa\' haqiqi adalah salah satu hukum bacaan nun sukun dan tanwin. Ikhfa\' haqiqi terjadi apabila nun sukun atau tanwin bertemu dengan salah satu dari 15 huruf ikhfa\' haqiqi.</item>
         <item>ت n\ (ta) ث (tsa) n\ ج (jim) n\ د (dal) n\ ذ (dhal) n\ ز (zai) n\ س (sin) n\ ش (syin)n\ ص (sad)n\ ض (dhad)n\ ط (tha)n\ ظ (zha)n\ ف (fa)n\ ق (qaf)n\ ك (kaf)</item>
         <item>Melepaskan bunyi nun sukun atau tanwin sedikit saja, kemudian disambung dengan huruf sesudahnya. Nun sukun atau tanwin disamarkan atau disembunyikan dengan cara melepaskan bunyinya sedikit saja dan disertai dengan dengung.</item>
         <item>لَقَدْ خَلَقْنَا ٱلْإِنسَٰنَِ \n مِنْ قَبْلِهِِ</item>
     </string-array>
 
-    // Idhar Syafawi
+    <!-- Idhar Syafawi-->
     <string-array name="title_idhar_syafawi">
         <item>Pengertian Idhar Syafawi</item>
         <item>Huruf – Huruf Idhar Syafawi :</item>
@@ -97,7 +97,7 @@
         <item>  خَلْفِهِمْ وَعَنْ \n  فَجَعَلَهُمْ كَعَصْفٍ مَّأْكُوْلٍِِ</item>
     </string-array>
 
-    // Ikhfa’ Syafawi
+    <!-- Ikhfa’ Syafawi-->
     <string-array name="title_ikhfa_syafawi">
         <item>Pengertian Ikhfa Syafawi</item>
         <item>Huruf – Huruf Ikhfa Syafawi :</item>
@@ -112,7 +112,7 @@
         <item>  تَرْمِيهِم بِحِجَارَةٍ \n وَمَا هُمْ بِمُؤْمِنِينَِِ</item>
     </string-array>
 
-    // Idhgam Mistly (Mimi)
+    <!--Idhgam Mistly (Mimi)-->
     <string-array name="title_idgham_mimi">
         <item>Pengertian Idhgam Mistly (Mimi)</item>
         <item>Huruf – Huruf Idhgam Mistly (Mimi) :</item>
@@ -125,5 +125,124 @@
         <item> م (mim)</item>
         <item>Membaca huruf mim rangkap secara mendengung.</item>
         <item>  أَيْمَانُكُمْ مِنْ  \n   اِنَّهَا عَلَيْهِمْ مُّؤْصَدَةٌِِۙ</item>
+    </string-array>
+
+    <!--Lam Tafkhim-->
+    <string-array name="title_lam_tafkhim">
+        <item>Apa itu Tafkhim?</item>
+        <item>Apa itu Tafkhim?</item>
+        <item>Bagaimana hukum bacaan Tafkhim?</item>
+        <item>Apa Lam yang bisa dibaca Tafkhim</item>
+        <item>Cara Membacanya</item>
+        <item>Contoh Lam Tafkhim</item>
+    </string-array>
+
+    <string-array name="materi_lam_tafkhim">
+        <item>Tafkhim secara bahasa artinya membesarkan, memperbanyak, atau menebalkan.</item>
+        <item>Menurut istilah tajwid, Tafkhim artinya menyembunyikan huruf dengan tebal hingga memenuhi mulut dengan gemanya.</item>
+        <item>Hukum bacaan tafkhim adalah menebalkan huruf dengan cara menebalkan makhrajnya.</item>
+        <item>Lam yang dibaca tafkhim terdapat pada lafadz Allah الله  yang disebut lafadz jalalah.</item>
+        <item>Ketentuan lam tafkhim adalah apabila huruf sebelumnya berlafadz fathah( ﹷ )  atau dhomah ( ُ- ).</item>
+        <item>معَ اللّه \n لاَإِلٰهَ إِلاَّ اللهٍِِ</item>
+    </string-array>
+
+    <!--Lam Tarqiq-->
+    <string-array name="title_lam_tarqiq">
+        <item>Apa itu Tarqiq?</item>
+        <item>Apa itu Tarqiq?</item>
+        <item>Bagaimana hukum bacaan Tarqiq?</item>
+        <item>Cara Membacanya</item>
+        <item>Contoh Lam Tarqiq</item>
+    </string-array>
+
+    <string-array name="materi_lam_tarqiq">
+        <item>Tarqiq bermakna melangsingkan.</item>
+        <item>Semua hukum bacaan lam hanyalah tarqiq apabila tidak ada lam jalalah.</item>
+        <item>Lam dibaca tarqiq ada dalam dua kondisi, yaitu: \na.	Lam pada lafaz jalalah dan didahului huruf yang berharakat kasrah. \nb.	Semua lam yang terdapat dalam lafal selain lafaz jalalah.</item>
+        <item>Lam tarqiq pada lafaz jalalah posisi mulut tidak perlu dimonyongkan.</item>
+        <item> قُلِ اللَّهُم \n بِسْمِ اللَّهَِِِ</item>
+    </string-array>
+
+    <!--Alif Lam Qomariyah-->
+    <string-array name="title_aliflam_qomariyah">
+        <item>Pengertian Alif Lam</item>
+        <item>Pengertian Alif Lam Qomariyah</item>
+        <item>Huruf – Huruf Alif Lam Qomariyah :</item>
+        <item>Cara Membacanya</item>
+        <item>Contoh Alif Lam Qomariyah</item>
+    </string-array>
+
+    <string-array name="materi_aliflam_qomariyah">
+        <item>Hukum alif lam (ال) merupakan ketetapan membaca alif lam mati yang diikuti oleh salah satu huruf hijaiyah.</item>
+        <item>Alif lam Qomariah diumpamakan dengan bulan, maka dari itu bintang akan tetap terlihat ketika terkena sinar bulan. Sehingga huruf Al Qomariah yang bertemu dengan al akan tetap nampak.</item>
+        <item>Adapun 14 huruf alif lam syamsiah antara lain adalah \n tha (ط) \n tsa (ث) \n shad (ص) \n ra (ر) \n ta (ت) \n dha (ض) \n dzal (ذ)\n nun (ن), dal (د), zai (ز), sin (س), zha (ظ), syin (ش), lam (ل).</item>
+        <item>Ketentuan membaca alif lam mati dengan cara dimasukan atau diidghamkan kepada huruf syamsiyah</item>
+        <item>الرَّحْمٰنِ الرَّحِيْم \n النَّجْمُ الثَّاقِبٍِِ</item>
+    </string-array>
+
+    <!--Alif Lam Syamsiyah-->
+    <string-array name="title_aliflam_syamsiyah">
+        <item>Pengertian Alif Lam</item>
+        <item>Pengertian Alif Lam Syamsiyah</item>
+        <item>Huruf – Huruf Alif Lam Syamsiyah :</item>
+        <item>Cara Membacanya</item>
+        <item>Contoh Alif Lam Syamsiyah</item>
+    </string-array>
+
+    <string-array name="materi_aliflam_syamsiyah">
+        <item>Hukum alif lam (ال) merupakan ketetapan membaca alif lam mati yang diikuti oleh salah satu huruf hijaiyah.</item>
+        <item>Alif Lam Syamsiah mengacu pada hukum bacaan yang menyebabkan lam sukun tersebut berubah menjadi bunyi panjang atau ditasydidkan ketika diikuti oleh huruf-huruf tertentu yang termasuk dalam kategori Syamsiah.</item>
+        <item>Huruf dari Al-Qomariah ini terdiri dari 14 huruf yakni \n alif (ا) \n ba’(ب) \n jim (ج) \n kha (ح) \n kho (خ ) \n \'Ain (ع) \n Ghain (غ) \n Fa (ف), Qaf (ق), Kaf (ك), Mim (م), wawu (و), Ha (ه), dan Ya (ي).</item>
+        <item>Cara membacanya jelas, dalam kata "al-bait" (rumah), lam sukun pada "Al" akan diucapkan dengan jelas atau izhar ketika bertemu dengan huruf "ba".</item>
+        <item>  ذٰلِكَ الْكِتٰب \n وَهُوَ الْغَفُوْرَِِ</item>
+    </string-array>
+
+    <!--Gunnah-->
+    <string-array name="title_gunnah">
+        <item>Pengertian Gunnah</item>
+        <item>Huruf – Huruf Gunnah :</item>
+        <item>Cara Membacanya</item>
+        <item>Contoh Gunnah</item>
+    </string-array>
+
+    <string-array name="materi_gunnah">
+        <item>Secara istilah, ghunnah artinya suara di pangkal hidung. Sedang secara terminologi ilmu tajwid, ghunnah artinya suara dengung yang tersusun dalam bentuk huruf Nun dan Mim yang mana terletak pada kedua hurufnya.</item>
+        <item>Huruf mim dan nun yang bertasydid.</item>
+        <item>Hukum bacaan ghunnah berlaku ketika huruf mim dan nun yang bertasydid wajib dibaca selama dua harakat atau dua ketukan.</item>
+        <item> اِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ </item>
+    </string-array>
+
+    <!--Qalqalah Kubro-->
+    <string-array name="title_qolqolah_kubro">
+        <item>Pengertian Qalqalah</item>
+        <item>Pengertian Qalqalah Kubro</item>
+        <item>Huruf – Huruf Qalqalah Kubro :</item>
+        <item>Cara Membacanya</item>
+        <item>Contoh Qalqalah Kubro</item>
+    </string-array>
+
+    <string-array name="materi_qolqolah_kubro">
+        <item>Qalqalah adalah memantulkan bunyi huruf tertentu karena sukun dengan mati asli, karena waqaf dengan dimatikan, dan tasydid/syiddah karena waqaf.</item>
+        <item>Qalqalah Kubra, yakni bila ada huruf qalqalah yang berada di akhir lafal, baik karena harakat sukun, fathah, kasrah, damah, dan tanwin tetap dibaca waqaf.</item>
+        <item>Ada lima huruf qalqalah, yakni \n ba (ب) \n jim (ج) \n dal (د) \n ta (ط) \n qaf (ق)  </item>
+        <item>Cara membaca qalqalah kubra lebih baik dipantukan dengan cukup kuat.</item>
+        <item>لَمْ يَلِدْ وَلَمْ يُولَدْ \n خَلَق</item>
+    </string-array>
+
+    <!--Qalqalah Sugra-->
+    <string-array name="title_qolqolah_sugra">
+        <item>Pengertian Qalqalah</item>
+        <item>Pengertian Qalqalah Sugra</item>
+        <item>Huruf – Huruf Qalqalah Sugra :</item>
+        <item>Cara Membacanya</item>
+        <item>Contoh Qalqalah Sugra</item>
+    </string-array>
+
+    <string-array name="materi_qolqolah_sugra">
+        <item>Qalqalah adalah memantulkan bunyi huruf tertentu karena sukun dengan mati asli, karena waqaf dengan dimatikan, dan tasydid/syiddah karena waqaf.</item>
+        <item>Qalqalah Sugra, yakni bila ada huruf qalqalah yang berada di tengah lafal dengan harakat sukun.</item>
+        <item>Ada lima huruf qalqalah, yakni \n ba (ب) \n jim (ج) \n dal (د) \n ta (ط) \n qaf (ق)  </item>
+        <item>Cara membaca qalqalah sugra dipantulkan dengan tidak terlalu kuat.</item>
+        <item>هُوَ الْأَبْتَر \n اَلَمْ يَجْعَلْ \n وَمَا أَدْرَاكَ </item>
     </string-array>
 </resources>
