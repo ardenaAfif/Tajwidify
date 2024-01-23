@@ -20,7 +20,10 @@ With a spirit of development and quality enhancement, we present this project wi
 The "Tajwidify" project emerged from the need to enhance the learning experience and user evaluation of their understanding of Tajwid. By incorporating pre-test and post-test features, this application aims to provide additional benefits to users in comprehending Tajwid principles more effectively. The integration of pre-test and post-test is expected to support users in mastering Tajwid principles better, creating a more meaningful and interactive learning experience.
 
 > ## Application Mockup
-TBA
+|       |       |       |       |
+|-------|-------|-------|-------|
+| <img src="https://github.com/ardenaAfif/Tajwidify/blob/master/Mockup%20Fix/daftar.jpg" width="200" height="500"> | <img src="https://github.com/ardenaAfif/Tajwidify/blob/master/Mockup%20Fix/login.jpg" width="200" height="500"> | <img src="https://github.com/ardenaAfif/Tajwidify/blob/master/Mockup%20Fix/home.jpg" width="200" height="500"> | <img src="https://github.com/ardenaAfif/Tajwidify/blob/master/Mockup%20Fix/subBab.jpg" width="200" height="500"> |
+| <img src="https://github.com/ardenaAfif/Tajwidify/blob/master/Mockup%20Fix/doa.jpg" width="200" height="500"> | <img src="https://github.com/ardenaAfif/Tajwidify/blob/master/Mockup%20Fix/quiz.jpg" width="200" height="500"> | <img src="https://github.com/ardenaAfif/Tajwidify/blob/master/Mockup%20Fix/result.jpg" width="200" height="500"> | <img src="https://github.com/ardenaAfif/Tajwidify/blob/master/Mockup%20Fix/profile.jpg" width="200" height="500"> |
 
 > ## Demo Application
 <!-- ![Demo App](images/Demo.gif) -->
@@ -49,7 +52,9 @@ TBA
 > ## How to Install
 1. Download Tajwidify App
 
-    Download App (TBA)
+<a href="https://github.com/ardenaAfif/Tajwidify/releases/download/1.0.0/Tajwidify.apk" target="_blank">
+  <img src="https://github.com/ardenaAfif/Tajwidify/blob/master/Mockup%20Fix/download.png" alt="Logo AMOLED" width="200">
+</a>
 
 2. How to clone this Project
 
