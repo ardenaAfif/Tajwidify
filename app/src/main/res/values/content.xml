@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="page">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </integer-array>
+
+    // Idhar Halqi
+    <string-array name="title_idhar_halqi">
+        <item>Pengertian Idhar Halqi</item>
+        <item>Huruf – Huruf Idhar Halqi :</item>
+        <item>Cara Membacanya</item>
+        <item>Contoh Idhar Halqi</item>
+    </string-array>
+    
+    <string-array name="materi_idhar_halqi">
+        <item>Idhar halqi adalah apabila nun sukun atau tanwin bertemu dengan salah satu dari lima huruf halqi.</item>
+        <item>ء (hamzah)\n ع (ain) \n غ (ghain) \n خ (kha) \n ح (ha)</item>
+        <item>Bunyi nun sukun atau tanwin dibiarkan samar-samar dengan cara melepaskan bunyinya sedikit saja. b. Bunyi nun sukun atau tanwin tidak dibaca dengan dengung.</item>
+        <item>مِنْ أَهْل</item>
+    </string-array>
+
+    // Idgham Bilagunnah
+    <string-array name="title_idgham_bilagunnah">
+        <item>Pengertian Idgham Bilagunnah</item>
+        <item>Huruf – Huruf Idgham Bilagunnah :</item>
+        <item>Cara Membacanya</item>
+        <item>Contoh Idgham Bilagunnah</item>
+    </string-array>
+
+    <string-array name="materi_idgham_bilagunnah">
+        <item>Idgham artinya idkhal atau memasukkan secara istilah adalah menyamarkan atau meleburkan nun mati atau tanwin dengan huruf-huruf idgham sehingga seolah-olah menjadi satu huruf yang bertasydid. Apabila nun sukun atau tanwin bertemu dengan salah satu dari empat huruf.</item>
+        <item>ل (lam) \n ر (ra) </item>
+        <item>Idhgam Bilagunnah Dibaca dengan tidak menggunakan suara berdengung. Ketika ada nun mati / nun sukun (نْ) atau  tanwin ( ــًــ, ــٍــ, ــٌــ ) yang bertemu dengan huruf hijaiyah ( ل ) atau Ro ( ر ).</item>
+        <item> مِنْ لَدُنْهِ \n مِنْ رَبِّهِ</item>
+    </string-array>
+
+    // Idgham Bigunnah
+    <string-array name="title_idgham_bigunnah">
+        <item>Pengertian Idgham Bigunnah</item>
+        <item>Huruf – Huruf Idgham Bigunnah :</item>
+        <item>Cara Membacanya</item>
+        <item>Contoh Idgham Bigunnah</item>
+    </string-array>
+
+    <string-array name="materi_idgham_bigunnah">
+        <item>Idgham artinya idkhal atau memasukkan secara istilah adalah menyamarkan atau meleburkan nun mati atau tanwin dengan huruf-huruf idgham sehingga seolah-olah menjadi satu huruf yang bertasydid. Apabila nun sukun atau tanwin bertemu dengan salah satu dari empat huruf.</item>
+        <item>م (mim) \n  ن (nun) \n و (wau) \n  ي (ya)</item>
+        <item>Huruf pertama yang berupa nun mati dan tanwin dimasukkan ke huruf yang kedua dengan disertai dengung. Nun mati atau tanwin dengan huruf - huruf idgham sehingga seolah-olah menjadi satu huruf yang bertasydid</item>
+        <item>مِنْ مَالِهِ \n لَنْ نَتْرُكَ \n إِنْ يَرَوْكَ</item>
+    </string-array>
+
+    // Iqlab
+    <string-array name="title_iqlab">
+        <item>Pengertian Iqlab</item>
+        <item>Huruf – Huruf Iqlab :</item>
+        <item>Cara Membacanya</item>
+        <item>Contoh Iqlab</item>
+    </string-array>
+
+    <string-array name="materi_iqlab">
+        <item>Apabila nun sukun atau tanwin bertemu dengan huruf ba\' (ب), maka nun sukun atau tanwin tersebut dibaca menjadi mim (م). Iqlab artinya memindahkan atau mengubah sesuatu dari asalnya.</item>
+        <item>م (mim) \n ب (ba)</item>
+        <item>Nun sukun ketika bertemu huruf tersebut adalah terang, jelas dan pendek, bunyi suaranya tetap jelas, tidak samar, dan tidak mendengung.</item>
+        <item>مِنْ بَعْدِ \n مِنْ بَطْنِ</item>
+    </string-array>
+
+    // Ikhfa Haqiqi
+    <string-array name="title_ikhfa">
+        <item>Pengertian Ikhfa Haqiqi</item>
+        <item>Huruf – Huruf Ikhfa Haqiqi :</item>
+        <item>Cara Membacanya</item>
+        <item>Contoh Ikhfa Haqiqi</item>
+    </string-array>
+
+    <string-array name="materi_ikhfa">
+        <item>khfa\' haqiqi adalah salah satu hukum bacaan nun sukun dan tanwin. Ikhfa\' haqiqi terjadi apabila nun sukun atau tanwin bertemu dengan salah satu dari 15 huruf ikhfa' haqiqi.</item>
+        <item>ت n\ (ta) ث (tsa) n\ ج (jim) n\ د (dal) n\ ذ (dhal) n\ ز (zai) n\ س (sin) n\ ش (syin)n\ ص (sad)n\ ض (dhad)n\ ط (tha)n\ ظ (zha)n\ ف (fa)n\ ق (qaf)n\ ك (kaf)</item>
+        <item>Melepaskan bunyi nun sukun atau tanwin sedikit saja, kemudian disambung dengan huruf sesudahnya. Nun sukun atau tanwin disamarkan atau disembunyikan dengan cara melepaskan bunyinya sedikit saja dan disertai dengan dengung.</item>
+        <item>لَقَدْ خَلَقْنَا ٱلْإِنسَٰنَِ \n مِنْ قَبْلِهِِ</item>
+    </string-array>
+</resources>

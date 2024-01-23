@@ -94,9 +94,11 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:id="@+id/tvBtnPrev"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
+                    android:gravity="center"
                     android:text="Kembali"
                     android:fontFamily="@font/poppins_regular"
                     android:textColor="@color/black"
@@ -126,10 +128,12 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:id="@+id/tvBtnNext"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:text="Lanjut"
+                    android:gravity="center"
                     android:fontFamily="@font/poppins_bold"
                     android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="parent"

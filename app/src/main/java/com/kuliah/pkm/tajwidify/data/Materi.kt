@@ -5,12 +5,13 @@ import com.google.firebase.firestore.DocumentId
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class MateriContent(
+data class Materi(
     @DocumentId
-    val materiContentId: String,
-    val page: Long,
+    val materiId: String,
+    val imgUrl: String,
     val title: String,
-    val materi: String
+    val category: String,
+    val urutan: Long
 ) : Parcelable {
-    constructor() : this("", 0L, "", "")
+    constructor() : this("", "","", "", 0L)
 }

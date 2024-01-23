@@ -29,17 +29,6 @@ class FirebaseCommon {
             .collection("results").document().set(result).await()
     }
 
-    suspend fun getMateriContent(materiId: String, subMateriId: String, page: Int): QuerySnapshot {
-        return firestore.collection("modul")
-            .document(materiId)
-            .collection("subModul")
-            .document(subMateriId)
-            .collection("content")
-            .whereEqualTo("page", page)
-            .orderBy("page")
-            .get().await()
-    }
-
      suspend fun getSubMateri(materiId: String): QuerySnapshot {
         return firestore.collection("modul")
             .document(materiId)

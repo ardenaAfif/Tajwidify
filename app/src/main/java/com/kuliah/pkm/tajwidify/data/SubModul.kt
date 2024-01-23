@@ -10,7 +10,8 @@ data class SubModul(
     val subMateriId: String,
     val imgUrl: String,
     val title: String,
+    val category: String,
     val urutan: Long
 ) : Parcelable {
-    constructor() : this("", "", "", 0L)
+    constructor() : this("", "","", "", 0L)
 }

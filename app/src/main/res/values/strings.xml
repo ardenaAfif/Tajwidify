@@ -70,8 +70,6 @@
     <string name="rate_us_desc">Jika Anda menikmati pengalaman menggunakan aplikasi kami.\n Berikan kami penilaian?</string>
     <string name="rate_us">Beri Kami Masukan</string>
     <string name="kritik_saran"><![CDATA[Kritik & Saran]]></string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="score_over">%1$d/%2$d\n</string>
 
 </resources>
