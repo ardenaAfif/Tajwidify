@@ -21,6 +21,7 @@ import com.kuliah.pkm.tajwidify.ui.profile.ProfileViewModel
 import com.kuliah.pkm.tajwidify.utils.Resource
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
+import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
@@ -52,58 +53,61 @@ class HomeFragment : Fragment() {
         getUser()
         onQuizCompleted()
 
-        jadwalSholat()
+        jadwalSholatAction()
         jadwalSholatViewModel.fetchPrayerTimesForToday("1621")
         observeNextJadwalSholat()
     }
 
     private fun observeNextJadwalSholat() {
         jadwalSholatViewModel.prayerTimes.observe(viewLifecycleOwner) {prayerResponse ->
-            val nextPlayerTime = getNextPlayerTime(prayerResponse.data.jadwal)
-            updatePrayerTimeUi(nextPlayerTime)
-
-            updateCurrentDate(prayerResponse.data.jadwal.tanggal)
-        }
-    }
-
-    private fun getNextPlayerTime(jadwal: Jadwal): Pair<String, String> {
-        val currentTime = Calendar.getInstance()
-
-        val formatter = SimpleDateFormat("HH:mm", Locale("id", "ID"))
-        val times = listOf(
-            "Subuh" to formatter.parse(jadwal.subuh),
-            "Dhuhur" to formatter.parse(jadwal.dzuhur),
-            "Asar" to formatter.parse(jadwal.ashar),
-            "Maghrib" to formatter.parse(jadwal.maghrib),
-            "Isya" to formatter.parse(jadwal.isya)
-        )
-
-        for ((name, time) in times) {
-            if (time != null && time.after(currentTime.time)) {
-                return name to formatter.format(time)
+            prayerResponse?.data?.jadwal?.let { jadwal ->
+                updatePrayerTimeUi(jadwal)
             }
         }
-
-        // If no future time is found (e.g., late night), return the first prayer time of the next day
-        return "Asar" to formatter.format(formatter.parse(jadwal.ashar))
     }
 
-    private fun updatePrayerTimeUi(nextPrayerTime: Pair<String, String>) {
-        binding.prayerName.text = "Waktu ${nextPrayerTime.first}"
-        binding.prayerTime.text = nextPrayerTime.second
+    private fun updatePrayerTimeUi(jadwal: Jadwal) {
+        val currentTime = Calendar.getInstance()
+
+        val formatter = SimpleDateFormat("HH:mm", Locale.getDefault())
+        val now = formatter.format(currentTime.time)
+
+        val nextPrayerTime = determineNextPrayer(jadwal, now)
+
+        binding.apply {
+            prayerName.text = nextPrayerTime.first
+            prayerTime.text = nextPrayerTime.second
+            updateCurrentDate(jadwal.date)
+        }
+    }
+
+    private fun determineNextPrayer(jadwal: Jadwal, currentTime: String): Pair<String, String> {
+        return when {
+            currentTime < jadwal.subuh -> "Waktu Subuh" to jadwal.subuh
+            currentTime < jadwal.dzuhur -> "Waktu Dhuhur" to jadwal.dzuhur
+            currentTime < jadwal.ashar -> "Waktu Ashar" to jadwal.ashar
+            currentTime < jadwal.maghrib -> "Waktu Maghrib" to jadwal.maghrib
+            else -> "Waktu Isya" to jadwal.isya
+        }
     }
 
     private fun updateCurrentDate(apiDate: String) {
-        // Assuming apiDate is in the format "EEEE, dd/MM/yyyy"
-        val originalFormat = SimpleDateFormat("EEEE, dd/MM/yyyy", Locale("id", "ID"))
+        // Format asli dari API (misalnya "yyyy-MM-dd")
+        val originalFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+        // Format target yang diinginkan untuk ditampilkan (misalnya "EEEE, dd MMMM yyyy")
         val targetFormat = SimpleDateFormat("EEEE, dd MMMM yyyy", Locale("id", "ID"))
-        val date = originalFormat.parse(apiDate)
-        val formattedDate = targetFormat.format(date ?: Date())
 
-        binding.prayerDate.text = formattedDate
+        try {
+            val date = originalFormat.parse(apiDate)
+            val formattedDate = targetFormat.format(date ?: Date())
+            binding.prayerDate.text = formattedDate
+        } catch (e: ParseException) {
+            e.printStackTrace()
+            binding.prayerDate.text = apiDate // Atau tampilkan pesan error/tanggal default
+        }
     }
 
-    private fun jadwalSholat() {
+    private fun jadwalSholatAction() {
         binding.apply {
             cardPrayer.setOnClickListener {
                 findNavController().navigate(R.id.action_homeFragment_to_jadwalSholatFragment)
@@ -185,5 +189,4 @@ class HomeFragment : Fragment() {
             shimmerFrame.visibility = View.GONE
         }
     }
-
 }

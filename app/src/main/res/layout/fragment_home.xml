@@ -89,7 +89,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_bold"
-                android:text="Waktu Dhuhur"
+                android:text="Waktu "
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -98,7 +98,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_bold"
-                android:text="11:47"
+                tools:text="-"
                 android:textColor="@color/green"
                 android:textSize="18sp" />
 
@@ -109,7 +109,7 @@
                 android:fontFamily="@font/poppins_regular"
                 android:textColor="@color/black"
                 android:textSize="15sp"
-                tools:text="Selasa, 16 Januari 2024" />
+                tools:text="--" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
