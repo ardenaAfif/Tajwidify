@@ -2,8 +2,10 @@ package com.kuliah.pkm.tajwidify.ui.auth.login
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.GoogleAuthProvider
 import com.kuliah.pkm.tajwidify.utils.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -57,6 +59,23 @@ class LoginViewModel @Inject constructor(
             .addOnFailureListener {
                 viewModelScope.launch {
                     _resetPassword.emit(Resource.Error(it.message.toString()))
+                }
+            }
+    }
+
+    fun loginWithGoogle(googleSignInAccount: GoogleSignInAccount) {
+        val credential = GoogleAuthProvider.getCredential(googleSignInAccount.idToken, null)
+        firebaseAuth.signInWithCredential(credential)
+            .addOnSuccessListener {
+                viewModelScope.launch {
+                    it.user?.let { firebaseUser ->
+                        _login.emit(Resource.Success(firebaseUser))
+                    }
+                }
+            }
+            .addOnFailureListener {
+                viewModelScope.launch{
+                    _login.emit(Resource.Error(it.message.toString()))
                 }
             }
     }

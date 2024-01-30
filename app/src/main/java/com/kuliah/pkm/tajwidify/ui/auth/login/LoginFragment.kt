@@ -2,19 +2,23 @@ package com.kuliah.pkm.tajwidify.ui.auth.login
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.snackbar.Snackbar
 import com.kuliah.pkm.tajwidify.R
 import com.kuliah.pkm.tajwidify.databinding.FragmentLoginBinding
+import com.kuliah.pkm.tajwidify.ui.auth.dialog.setupBottomSheetDialog
 import com.kuliah.pkm.tajwidify.ui.home.HomeActivity
 import com.kuliah.pkm.tajwidify.utils.Resource
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.flow.collectLatest
 
 @AndroidEntryPoint
 class LoginFragment : Fragment() {
@@ -32,6 +36,8 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        forgotPassword()
 
         binding.apply {
 
@@ -63,7 +69,7 @@ class LoginFragment : Fragment() {
         }
 
         lifecycleScope.launchWhenStarted {
-            if (viewModel.isUserLoggedIn()){
+            if (viewModel.isUserLoggedIn()) {
                 Intent(requireContext(), HomeActivity::class.java).also {
                     it.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
                     startActivity(it)
@@ -94,6 +100,39 @@ class LoginFragment : Fragment() {
 
                         else -> Unit
                     }
+                }
+            }
+        }
+    }
+
+    private fun forgotPassword() {
+        binding.apply {
+            tvForgotPassword.setOnClickListener {
+                setupBottomSheetDialog { email ->
+                    viewModel.resetPassword(email)
+                }
+            }
+        }
+
+        lifecycleScope.launchWhenStarted {
+            viewModel.resetPassword.collectLatest {
+                when(it) {
+                    is Resource.Loading -> {
+
+                    }
+                    is Resource.Success -> {
+                        Snackbar.make(
+                            requireView(),
+                            "Link Reset Password telah dikirim ke email Anda",
+                            Snackbar.LENGTH_LONG
+                        ).show()
+                    }
+                    is Resource.Error -> {
+                        Log.e("LoginFragment", it.message.toString())
+                        Snackbar.make(requireView(), "Error: ${it.message}", Snackbar.LENGTH_LONG)
+                            .show()
+                    }
+                    else -> Unit
                 }
             }
         }
