@@ -47,7 +47,7 @@ The "Tajwidify" project emerged from the need to enhance the learning experience
 > ## How to Install
 1. Download Tajwidify App
 
-<a href="https://github.com/ardenaAfif/Tajwidify/releases/download/1.1.3/Tajwidify.apk" target="_blank">
+<a href="https://play.google.com/store/apps/details?id=com.kuliah.pkm.tajwidify" target="_blank">
   <img src="https://github.com/ardenaAfif/Tajwidify/blob/master/Mockup%20Fix/download.png" alt="Logo AMOLED" width="200">
 </a>
 
